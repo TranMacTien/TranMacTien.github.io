@@ -27,8 +27,8 @@
 					<input class="field field-auto" type="date" name="birthday" required>
 				</li>
 				<li>
-					<input type="radio" name="gender" value="male">Male
-					<input type="radio" name="gender" value="female">Female
+					<input id="male-checked" type="radio" name="gender" value="male"><label  class="text-check" for="male-checked">Male</label>
+					<input id="female-checked" type="radio" name="gender" value="female"><label class="text-check" for="female-checked">Female</label>
 				</li>
 				<li>
 					<label>Location <span class="required">*</span></label>
@@ -38,10 +38,10 @@
 					</select>
 				</li>
 				<li>
-					<input type="checkbox">I agree to the Terms and Conditions<br>
+					<input id="condition" type="checkbox" required><label class="text-check" for="condition">I agree to the Terms and Conditions</label>
 				</li>
 				<li>
-					<button type="submit" value="submit">Submit</button>
+					<button class="submit-btn" type="submit" value="submit">Submit</button>
 				</li>
 			</ul>
 		</fieldset>
