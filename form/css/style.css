@@ -45,13 +45,23 @@ input, select {
   box-sizing: border-box; }
 
 select {
-  height: 2em;
-  padding: 2px; }
+  height: 2.5em;
+  padding: 0 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+option {
+  border: 1px solid black; }
 
 input:focus {
   -webkit-box-shadow: 0 0 8px #88D5E9;
   box-shadow: 0 0 8px #88D5E9;
   border: 1px solid #88D5E9; }
+
+input[type=radio], input[type=checkbox] {
+  outline: 0;
+  border: 0; }
 
 input[type=radio]:focus, input[type=checkbox]:focus {
   border: none;
@@ -93,12 +103,28 @@ ul li {
 .float-right-field {
   float: right; }
 
+.li-custom {
+  position: relative; }
+
+.arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3.5px;
+  margin: 0;
+  position: absolute;
+  top: 27px;
+  left: 125px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
 .text-check {
   display: inline-block;
   margin-right: 20px;
-  -webkit-transform: translateY(-1.25px);
-  -ms-transform: translateY(-1.25px);
-  transform: translateY(-1.25px); }
+  -webkit-transform: translateY(-1.5px);
+  -ms-transform: translateY(-1.5px);
+  transform: translateY(-1.5px); }
 
 .align-center {
   text-align: center;
@@ -106,6 +132,8 @@ ul li {
 
 .submit-btn {
   padding: 10px 20px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1dbeb9,endColorstr=#1ebc95);
+  /* for IE9 and ealier*/
   background: -webkit-gradient(linear, left top, left bottom, from(#1dbeb9), to(#1ebc95));
   background: -webkit-linear-gradient(#1dbeb9, #1ebc95);
   background: -o-linear-gradient(#1dbeb9, #1ebc95);
