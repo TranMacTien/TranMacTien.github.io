@@ -69,14 +69,6 @@ ul li {
   width: 40%;
   display: inline-block; }
 
-.select-option {
-  padding: 10px; }
-
-option {
-  display: block;
-  height: 30px;
-  padding: 10px; }
-
 .text-check {
   display: inline-block;
   margin-right: 20px; }
