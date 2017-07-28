@@ -5,7 +5,7 @@ body {
   outline: none;
   border: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1dbeb9,endColorstr=#1ebc95);
-  /* for IE9 and ealier*/
+  /* for IE9 and earlier*/
   background-image: -webkit-linear-gradient(330deg, #84fab0 0%, #8fd3f4 100%);
   background-image: -o-linear-gradient(330deg, #84fab0 0%, #8fd3f4 100%);
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
@@ -48,15 +48,15 @@ input, select {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-select::-ms-expand {
-  display: none; }
-
+/* select::-ms-expand {
+    display: none;
+} */
 select {
   height: 2.5em;
   padding: 0 10px 0 10px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none; }
+  /* appearance: none;
+	-webkit-appearance: none;
+	 	-moz-appearance: none; */ }
 
 option {
   border: 1px solid black; }
@@ -145,7 +145,7 @@ ul li {
 .submit-btn {
   padding: 10px 20px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1dbeb9,endColorstr=#1ebc95);
-  /* for IE9 and ealier*/
+  /* for IE9 and earlier*/
   background: -webkit-gradient(linear, left top, left bottom, from(#1dbeb9), to(#1ebc95));
   background: -webkit-linear-gradient(#1dbeb9, #1ebc95);
   background: -o-linear-gradient(#1dbeb9, #1ebc95);
