@@ -1,59 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Form</title>
+	<title>Grab</title>
+	<link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png">
 
 </head>
 <body>
-	<form name="myForm" action="https://tranmactien.github.io/form/redirect/">
-		<fieldset>
-			<!-- <legend><h1>Form Demo</h1></legend> -->
-			<h1>Form Demo</h1>
-			<ul class="form-demo">
-				<li class="clearfix">
-					<label>Full Name <span class="required">*</span></label>
-					<input class="field field-divide float-left-field" type="text" name="firstname" placeholder=" First" required>
-					<input class="field field-divide float-right-field" type="text" name="lastname" placeholder=" Last" required>
+	<header>
+		<!-- <nav class="clearfix">
+			<div class="logo-container">
+				<img src="img/logo.png" alt="logo">
+			</div>
+			
+			<div class="nav1-container">
+				<ul>
+					<li><a href="#">Việt Nam</a></li>
+					<li class="dropdown"><a href="#">Các dịch vụ</a>
+					<div class="dropdown-content" style="min-width: 120px;">
+						<ul>
+							<li><a href="#">GrabTaxi</a></li>
+							<li><a href="#">GrabCar</a></li>
+							<li><a href="#">GrabExpress</a></li>
+							<li><a href="#">GrabShare</a></li>
+						</ul>
+					</div>
+					</li>
+					<li class="dropdown"><a href="#">Hợp tác</a>
+						<div class="dropdown-content" style="min-width: 150px;">
+							<ul>
+								<li><a href="#">Grab for Work</a></li>
+								<li><a href="#">Hợp tác</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul></div>
+				<div class="nav2-container">
+				<ul>
+					<li class="dropdown"><a href="#">Trở thành tài xế</a>
+						<div class="dropdown-content" style="right: 0;">
+							<ul>
+								<li><a href="#">Trở thành tài xế</a></li>
+								<li><a href="#">Làm tài xế GrabCar</a></li>
+								<li><a href="#">Đăng kí chủ xe GrabCar</a></li>
+								<li><a href="#">Làm tài xế GrabTaxi</a></li>
+								<li><a href="#">Đối tác GrabBike | GrabExpress</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Hỗ trợ</a></li>
+					<li class="dropdown"><a href="#">Tiếng Việt</a>
+					<div class="dropdown-content" style="right: 0; min-width: 120px;">
+						<ul>
+							<li><a href="#">English</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</nav> -->
+				<!-- top navigation bar -->
+	</header>
+	<nav id="nav" class="navbar clearfix">
+			<div class="icon-menu"><span id="open-button">&#9776;</span></div>
+			<div class="logo-container">
+				<a href="#"><img src="img/logo.png" alt="logo" id="logo"></a>
+			</div>
+			<div class="signup"><a href="#">Driver Sign-Up</a>
+			</div>
+	</nav>
+	<aside>
+		<div class="side-nav" id="side-nav">
+			<ul>
+				<li><a href="#" id="close-button">&times; Close</a></li>
+				<li class="toggle-menu toggle-menu-head">
+					<a class="toggle-link" href="#">Trở thành tài xế<span class="arrow"></span></a>
+					<ul class="submenu">
+						<li><a href="#">Trở thành tài xế</a></li>
+						<li><a href="#">Làm tài xế GrabCar</a></li>
+						<li><a href="#">Đăng ký chủ xe GrabCar</a></li>
+						<li><a href="#">Làm tài xế GrabTaxi</a></li>
+						<li><a href="#">Đối tác GrabBike | GrabExpress</a></li>
+					</ul>
 				</li>
-				<li>
-					<label>Email <span class="required">*</span></label>
-					<input class="field" type="email" name="emailfield" placeholder=" example@gmail.com" required>
+				<li class="toggle-menu">
+					<a class="toggle-link" href="#">Các dịch vụ<span class="arrow"></span></a>
+					<ul class="submenu">
+						<li><a href="#">Taxi</a></li>
+						<li><a href="#">Car</a></li>
+						<li><a href="#">Bike</a></li>
+						<li><a href="#">Express</a></li>
+						<li><a href="#">Share</a></li>
+					</ul>
 				</li>
-				<li>
-					<label>Phone <span class="required">*</span></label>
-					<input class="field" type="tel" name="phonefield" placeholder="example: 012345xxx" required>
+				<li class="toggle-menu">
+					<a class="toggle-link" href="#">Doanh nghiệp<span class="arrow"></span></a>
+					<ul class="submenu">
+						<li><a href="#">Grab fo Work</a></li>
+						<li><a href="#">Hợp tác</a></li>
+					</ul>
 				</li>
-				<li>
-					<label>Password <span class="required">*</span></label>
-					<input class="field" type="password" name="passwordfield" placeholder="Your password" required>
+				<li><a href="#">Về chúng tôi</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Grab trên mặt báo</a></li>
+				<li><a href="#">Tuyển dụng</a></li>
+				<li><a href="#">Safety</a></li>
+				<li><a href="#">Hỗ trợ</a></li>
+				<li class="toggle-menu">
+					<a class="toggle-link" href="#">Việt Nam<span class="arrow"></span></a>
+					<ul class="submenu">
+						<li><a href="#">Malaysia</a></li>
+						<li><a href="#">Thailand</a></li>
+						<li><a href="#">Singapore</a></li>
+					</ul>
 				</li>
-				<li>
-					<label>Birthday <span class="required">*</span></label>
-					<input class="field" type="date" name="birthday" placeholder="dd/mm/yyyy" required>
-				</li>
-				<li>
-					<input id="male-checked" type="radio" name="gender" value="male"><label  class="text-check" for="male-checked">Male</label>
-					<input id="female-checked" type="radio" name="gender" value="female"><label class="text-check" for="female-checked">Female</label>
-				</li>
-				<li class="li-custom">
-					<label>Location <span class="required">*</span></label>
-					<select name="location" class="select-option">
-						<option value="hanoi">Ha Noi</option>
-						<option value="hochiminh">Ho Chi Minh</option>
-					</select>
-				</li>
-				<li>
-					<input id="condition" type="checkbox" required><label class="text-check" for="condition">I agree to the Terms and Conditions</label>
-				</li>
-				<li class="align-center">
-					<button class="submit-btn" type="submit" value="submit">Register</button>
+				<li class="toggle-menu">
+					<a class="toggle-link" href="#">Tiếng Việt<span class="arrow"></span></a>
+					<ul class="submenu">
+						<li><a href="#">English</a></li>
+					</ul>
 				</li>
 			</ul>
-		</fieldset>
-	</form>
+		</div>
+	</aside>
+<div id="wrapper">	
+	<section class="hero-banner">
+		<!-- 
+					hero banner 
+		-->
+		<div class="hero-container">
+			<div class="hero-text">
+				<h1>TĂNG THU NHẬP. THÊM KẾT NỐI</h1>
+				<p>Trở thành đối tác của Grab để làm chủ cuộc sống của mình tốt hơn.</p>
+			</div>
+		</div>
+	</section>
+	<section class="section1">
+		<h2>Bạn hứng thú với dịch vụ nào?</h2>
+		<p>Nhấp chuột vào hình ảnh bên dưới để tìm hiểu thêm</p>
+		<div class="showcase-container">
+			<figure class="showcase-item fade">
+				<img class="imageshowcase" src="img/showcase1.jpg" alt="showcase1">
+				<div class="gradient"></div>
+				<div class="showcase-text">
+					<p>TÀI XẾ GRABCAR</p>
+					<a href="#">Tìm hiểu thêm</a>
+				</div>
+					
+			</figure>
+			<figure class="showcase-item fade">
+				<img class="imageshowcase" src="img/showcase1.jpg" alt="showcase1">
+				<div class="gradient"></div>
+				<div class="showcase-text">
+					<p>CHỦ XE GRABCAR</p>
+					<a href="#">Tìm hiểu thêm</a>
+				</div>
+			</figure>
+			<figure class="showcase-item fade">
+				<img class="imageshowcase" src="img/showcase2.jpg" alt="showcase2">
+				<div class="gradient"></div>
+				<div class="showcase-text">
+					<p>TÀI XẾ GRABBIKE</p>
+					<a href="#">Tìm hiểu thêm</a>
+				</div>
+			</figure>
+			<figure class="showcase-item fade">
+				<img class="imageshowcase" src="img/showcase3.jpg" alt="showcase3">
+				<div class="gradient"></div>
+				<div class="showcase-text">
+					<p>TÀI XẾ GRABTAXI</p>
+					<a href="#">Tìm hiểu thêm</a>
+				</div>
+			</figure>
+		</div>
+		<br>
+		<div style="text-align:center;">
+			<span class="dot">1</span> 
+			<span class="dot">2</span> 
+			<span class="dot">3</span>
+			<span class="dot">4</span>
+		</div>
+	</section>	<!-- section1 -->
+	<section class="section2">
+		<h2>Vì sao bạn nên gia nhập Grab?</h2>
+		<div class="showcase-container clearfix">
+			<figure class="showcase-item">
+				<img src="img/icon1.png" alt="icon1">
+				<h4>Tự do kiếm thêm thu nhập</h4>
+				<p>Thu nhập ổn định tùy theo năng suất và khác nhau ở từng loại hình dịch vụ.</p>
+			</figure>
+			<figure class="showcase-item">
+				<img src="img/icon2.png" alt="icon2">
+				<h4>Tự do và tự chủ về thời gian</h4>
+				<p>Không gò bó về mặt thời gian, chính bạn là người quyết định thời gian làm việc.</p>
+				
+			</figure>
+			<figure class="showcase-item">
+				<img src="img/icon3.png" alt="icon3">
+				<h4>Tự do gắn kết và chia sẻ</h4>
+				<p>Thêm cơ hội được giao tiếp và kết nối với những người trong cộng đồng Grab.</p>
+				
+			</figure>
+		</div>
+	</section> <!-- section2 -->	
+	<section class="section3 clearfix">
+		<h2>Quy trình sử dụng</h2>
+		<p>Thoải mái lái xe cùng Grab</p>
+		<div class="container clearfix">
+			<div class="procedure-text clearfix">
+			<div style="text-align:center;">
+				<span class="bullet">1</span> 
+				<span class="arrowDirector">&rarr;</span>
+				<span class="bullet">2</span> 
+				<span class="arrowDirector">&rarr;</span>
+				<span class="bullet">3</span>
+				<span class="arrowDirector">&rarr;</span>
+				<span class="bullet">4</span>
+			</div>
+			<div class="procedure">
+				<ul>
+					<li class="li-procedure">
+						<a href="#"><h4>Nhận đặt chuyến</h4></a>
+						<p>Mở ứng dụng để bắt đầu nhận đặt chuyến của khách hàng.</p>
+					</li>
+					<li class="li-procedure">
+						<a href=""><h4>Nhận cuốc xe</h4></a>
+						<p>Chấp thuận đặt chuyến để nhận được thông tin đầy đủ của khách hàng.</p>
+					</li>
+					<li class="li-procedure">
+						<a href="#"><h4>Đón khách</h4></a>
+						<p>Hệ thống định vị GPS sẽ hiển thị địa điểm của khách hàng để đến đón.</p>
+					</li>
+					<li class="li-procedure">
+						<a href="#"><h4>Trả khách</h4></a>
+						<p>Chọn phím Trả Khách khi đã đến nơi và nhận tiền thanh toán.</p>
+					</li>
+				</ul>
+			</div>
+			<div class="mobile-bg">
+				<img id="hand" src="img/hand_bg.png" alt="hand bg">
+				<figure class="procedure-inner fade">
+					<img src="img/1_step.jpg" alt="step 3">
+				</figure>
+				<figure class="procedure-inner fade">
+					<img src="img/2_step.jpg" alt="step 3">
+				</figure>
+				<figure class="procedure-inner fade">
+					<img src="img/3_step.jpg" alt="step 3">
+				</figure>
+				<figure class="procedure-inner fade">
+					<img src="img/4_step.jpg" alt="step 3">
+				</figure>	
+			</div>
+			</div>
+		</div>
+	</section>
+	<section class="section4">
+		<div class="banner-container">
+			<!-- <img src="img/banner_download.jpg" alt="banner" id="banner"> -->
+			<h2>Tải ứng dụng Grab cho tài xế ngay!</h2>
+			<div class="download clearfix">
+				<div class="blockleft clearfix">
+					<div class="qr-container">
+						<p>Quét mã QR</p>
+						<img src="img/qrcode.jpg" alt="qrcode" id="qrcode">
+					</div>
+				</div>
+				<div class="blockright">
+					<div class="ggcontainer">
+						<p style="visibility: hidden;">Google Play</p>
+						<a href="#"><img src="img/ggplay.png" alt="ggplay" id="ggplay"></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	<footer>
+		<div class="info-container clearfix">
+			<div class="block1">
+				<img src="img/footer_logo.png" alt="footer logo" class="logo-footer">
+				<p>Công Ty TNHH GrabTaxi - 268 Tô Hiến Thành, P.15, Q.10, TP Hồ Chí Minh<br>
+				Mã số doanh nghiệp: 0312650437<br>
+				Đại Diện Công Ty: Lim Yen Hock<br>
+				Chức vụ: Giám Đốc<br>
+				(08) 7108 7108<br>
+				support.hcm@grab.com</p>
+			</div>
+		
+		
+		<div class="block2-container">
+			<!-- <div> -->
+			<div class="block2">
+				<h4>CÔNG TY</h4>
+				<ul>
+					<li><a href="#">Về chúng tôi</a></li>
+					<li><a href="#">Grab trên mặt báo</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Tuyển dụng</a></li>
+				</ul>
+			</div>
+				
+			
+			<div class="block2">
+				<h4>CÁC DỊCH VỤ</h4>
+				<ul>
+					<li><a href="#">GrabTaxi</a></li>
+					<li><a href="#">GrabCar</a></li>
+					<li><a href="#">GrabBike</a></li>
+					<li><a href="#">GrabExpress</a></li>
+					<li><a href="#">GrabShare</a></li>
+				</ul>
+			</div>
+			<div class="block2">
+				<h4>DOANH NGHIỆP</h4>
+				<ul>
+					<li><a href="#">Grab for Work</a></li>
+					<li><a href="#">Cơ hội hợp tác</a></li>
+				</ul>
+			</div>					
+			<div class="block2">
+				<h4>CHUYẾN ĐI</h4>
+				<ul>
+					<li><a href="#">Lái xe cùng Grab</a></li>
+					<li><a href="#">An toàn</a></li>
+					<li><a href="#">Hỗ trợ</a></li>
+				</ul>
+				<div id="registered-container">
+					<img src="img/registered.png" alt="registered logo" id="registered">
+				</div>
+			</div>
+			
+			<!-- </div> -->
+		</div>	<!-- block2-container -->
+		</div>	<!-- info-container -->
+		<div class="bottom-text">
+			<h4>Hãy liên lạc thường xuyên nhé</h4>
+		</div>
+		<div class="icon-container">
+			<a href="#"><img src="img/icon_fb.png" alt="icon facebook" class="icon-footer"></a>
+			<a href="#"><img src="img/icon_instagram.png" alt="icon instagram" class="icon-footer"></a>
+			<a href="#"><img src="img/icon_twitter.png" alt="icon twitter" class="icon-footer"></a>
+		</div>
+		<div class="rules-container">
+			<p>Quy chế hoạt động và Điều khoản sử dụng<br>
+			Chính sách bảo mật<br>
+			&copy; Grab 2017</p>
+		</div>
+	</footer>
+</div>	<!-- wrapper -->
+	<script src="js/myFunction.js"></script> 
 </body>
 </html>
