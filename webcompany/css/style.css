@@ -31,7 +31,8 @@ h1 {
   padding: 0;
   font-size: 2.5em;
   text-align: center;
-  color: white; }
+  color: white;
+  font-weight: normal; }
 
 h2 {
   color: #db0000;
@@ -157,14 +158,12 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
-  position: relative; }
+  position: relative;
+  margin-top: 60px; }
 
 .hero--news {
   height: 300px;
   background-image: url("../subpage/news/img/hero.jpeg"); }
-
-.hero--news h1 {
-  font-weight: normal; }
 
 .container-align {
   position: absolute;
@@ -229,6 +228,9 @@ ul {
 .font--small {
   font-size: 0.8em; }
 
+.font--light {
+  font-weight: lighter; }
+
 .product p {
   font-size: 0.8em;
   padding: 30px 20px; }
@@ -247,11 +249,11 @@ ul {
 .news-container > h2 {
   text-align: center; }
 
-.news-container--bgwhite {
-  background: white; }
-
 .align-left {
   text-align: left; }
+
+.align-justify {
+  text-align: justify; }
 
 .bottom-space {
   padding-bottom: 100px; }
@@ -292,6 +294,9 @@ ul {
 
 .wrapper {
   padding: 0 20px; }
+
+.bg--white {
+  background: white; }
 
 .news-container p {
   text-align: left;
@@ -424,3 +429,8 @@ button {
 button:hover {
   background: #db0000;
   color: white; }
+
+#slogan {
+  font-weight: lighter;
+  color: #555;
+  padding: 20px 30px; }
