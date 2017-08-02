@@ -123,7 +123,7 @@ ul {
   display: none; }
 
 #menu-toggle:checked ~ .menu {
-  height: 400px; }
+  height: 100vh; }
 
 #menu-toggle:checked + label {
   color: white;
@@ -133,9 +133,9 @@ ul {
   height: 0;
   overflow: hidden;
   font-family: "Montserrat", Arial, sans-serif;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease; }
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease; }
 
 .menu__menu-item {
   display: block;
@@ -434,3 +434,7 @@ button:hover {
   font-weight: lighter;
   color: #555;
   padding: 20px 30px; }
+
+#map {
+  width: 100%;
+  height: 200px; }
