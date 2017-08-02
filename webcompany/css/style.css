@@ -39,7 +39,8 @@ h2 {
   padding: 30px 0;
   /* margin-bottom: 10px; */
   font-weight: normal;
-  font-size: 2em; }
+  font-size: 2em;
+  text-align: center; }
 
 h4 {
   font-weight: normal;
@@ -292,12 +293,6 @@ ul {
 .wrapper {
   padding: 0 20px; }
 
-/* .img-container .figcaption--inside{
-	position: absolute;
-	left: 5px;
-	bottom: 5px;
-	color: white;
-} */
 .news-container p {
   text-align: left;
   font-size: 0.8em;
