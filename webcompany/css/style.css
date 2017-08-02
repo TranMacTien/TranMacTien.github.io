@@ -255,6 +255,9 @@ ul {
 .align-justify {
   text-align: justify; }
 
+.align-center {
+  text-align: center; }
+
 .bottom-space {
   padding-bottom: 100px; }
 
@@ -435,6 +438,9 @@ button:hover {
   color: #555;
   padding: 20px 30px; }
 
+.container--padding {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
 #map {
-  width: 100%;
-  height: 200px; }
+  height: 40vw; }
