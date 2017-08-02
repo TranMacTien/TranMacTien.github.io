@@ -5,6 +5,9 @@ html, body {
   margin: 0;
   padding: 0;
   outline: 0;
+  background: #eee; }
+
+* {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -13,6 +16,9 @@ a {
 
 p {
   margin: 0; }
+
+figcaption {
+  font-weight: bold; }
 
 img {
   max-width: 100%;
@@ -29,8 +35,8 @@ h1 {
 h2 {
   color: #db0000;
   margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
+  padding: 30px 0;
+  /* margin-bottom: 10px; */
   font-weight: normal;
   font-size: 2em; }
 
@@ -39,8 +45,10 @@ h4 {
   font-size: 1.2em;
   margin: 0; }
 
-hr {
-  border-top: 2px solid #db0000; }
+.hr-red {
+  border-top: 2px solid #db0000;
+  margin: 0;
+  padding: 0; }
 
 ul {
   list-style-type: none;
@@ -147,6 +155,7 @@ ul {
   position: relative; }
 
 .hero--news {
+  height: 300px;
   background-image: url("../subpage/news/img/hero.jpeg"); }
 
 .hero--news h1 {
@@ -163,6 +172,19 @@ ul {
 .container-align-hero {
   width: 80%; }
 
+.container-align--left-bottom {
+  top: auto;
+  bottom: 10px;
+  left: 10px;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.container-align--left-bottom h1 {
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: normal; }
+
 .container-align p {
   margin: 0;
   padding: 0;
@@ -172,7 +194,9 @@ ul {
 /* about ****************************************/
 .about {
   padding: 30px 0;
-  text-align: center; }
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid #ddd; }
 
 .container {
   margin: 0;
@@ -210,18 +234,50 @@ ul {
 /* news-container ******************************/
 .news-container {
   text-align: center;
-  padding: 20px; }
+  padding: 0 20px;
+  padding-bottom: 10px; }
+
+.news-container > h2 {
+  text-align: center; }
+
+.news-container--bgwhite {
+  background: white; }
+
+.align-left {
+  text-align: left; }
 
 .img-container {
   margin: 0 auto;
   padding: 0;
   max-width: 350px; }
 
+.img-container--mod {
+  padding: 5px;
+  border-top: 1px solid #ddd; }
+
+.img-container--half {
+  width: 50%;
+  float: left;
+  padding: 3px; }
+
+.news-container .img-container--mod:last-child {
+  padding: 5px;
+  border-bottom: 1px solid #ddd; }
+
+.img-container--mod img {
+  width: 35%;
+  display: block;
+  float: left; }
+
+.img-container--mod figcaption {
+  width: 60%;
+  float: right;
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold; }
+
 .img-container figcaption {
   text-align: left; }
-
-.news-container h2 {
-  padding: 30px 0; }
 
 .news-container p {
   text-align: left;
