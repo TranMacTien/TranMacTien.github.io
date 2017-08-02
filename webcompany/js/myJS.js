@@ -11,7 +11,7 @@
 	function showSlide(n){
 		var i;
 		var j;
-		var slides=document.getElementsByClassName("slide-img");
+		var slides=document.getElementsByClassName("slideshow__img");
 		if(n>slides.length-1){
 			slideIndex=0;
 		}

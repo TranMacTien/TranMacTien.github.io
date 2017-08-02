@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="icon" href="img/logo.png" type="image/png">
@@ -12,55 +13,56 @@
 <body>
 	<header>
 		<nav class="nav-bar">
-		<div class="logo-container">
-			<a href="#">
-				<img src="img/logo.png" alt="logo">
-				<h2>Company Name</h2>
-			</a>
-		</div>
-		<div class="menu-container">
-			<input type="checkbox" id="menu-toggle"/> 
-			<label class="toggle-btn" for="menu-toggle">&#9776;</label>  
-			<ul class="menu">
-				<li class="menu-item"><a href="#">Trang chủ</a></li>
-				<li class="menu-item"><a href="#">Giới thiệu</a></li>
-				<li class="menu-item"><a href="">Tin tức - Sự kiện</a></li>
-				<li class="menu-item"><a href="">Liên hệ</a></li>
-			</ul>
-		</div>
+			<div class="nav-bar__logo-container">
+				<a href="#">
+					<img src="img/logo.png" alt="logo">
+					<h2>Company Name</h2>
+				</a>
+			</div>
+			<div>
+				<input type="checkbox" id="menu-toggle"/> 
+				<label class="toggle-btn" for="menu-toggle">&#9776;</label>  
+				<ul class="menu">
+					<li class="menu__menu-item"><a href="index.htm">Trang chủ</a></li>
+					<li class="menu__menu-item"><a href="#">Giới thiệu</a></li>
+					<li class="menu__menu-item"><a href="#">Sản phẩm</a></li>
+					<li class="menu__menu-item"><a href="subpage/news/index.htm">Tin tức - Sự kiện</a></li>
+					<li class="menu__menu-item"><a href="#">Liên hệ</a></li>
+				</ul>
+			</div>
 		</nav>
-		<div class="hero-container">
-			<div class="container-align">
+		<div class="hero">
+			<div class="container-align container-align-hero">
 				<h1>Lorem ipsum dolor</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			</div>
 		</div>
 	</header>
 	<section class="about">
-		<figure class="container">
+		<figure class="container--custom">
+			<img src="img/icon-about.png" alt="example">
+			<h4>Laboriosam vel ratione</h4>
+			<p>Lorem ipsum dountur numquam enim, moum. Laboriosas provident in sunt, ipsum minus asperiores sit cupiditate.</p>
+		</figure>
+		<figure class="container--custom">
 			<img src="img/icon-about.png" alt="example">
 			<h4>Laboriosam vel ratione</h4>
 			<p>Lorem ipsum dountur numquam enim, mollitia earum. Laboriosas provident in sunt, ipsum minus asperiores sit cupiditate.</p>
 		</figure>
-		<figure class="container">
+		<figure class="container--custom">
 			<img src="img/icon-about.png" alt="example">
 			<h4>Laboriosam vel ratione</h4>
-			<p>Lorem ipsum dountur numquam enim, mollitia earum. Laboriosas provident in sunt, ipsum minus asperiores sit cupiditate.</p>
-		</figure>
-		<figure class="container">
-			<img src="img/icon-about.png" alt="example">
-			<h4>Laboriosam vel ratione</h4>
-			<p>Lorem ipsum dountur numquam enim, mollitia earum. Laboriosas provident in sunt, ipsum minus asperiores sit cupiditate.</p>
+			<p>Lorem ipsum , ipsum minus asperiores sit cupiditate.</p>
 		</figure>
 
 	</section>
 	<section class="product">
 		<h2>Sản phẩm</h2>
 		<div class="slideshow">
-			<img class="slide-img fade" src="img/product1.jpg" alt="example">
-			<img class="slide-img fade" src="img/product2.jpg" alt="example">	
-			<img class="slide-img fade" src="img/product3.jpg" alt="example">	
-			<img class="slide-img fade" src="img/product4.jpg" alt="example">
+			<img class="slideshow__img fade" src="img/product1.jpg" alt="example">
+			<img class="slideshow__img fade" src="img/product2.jpg" alt="example">	
+			<img class="slideshow__img fade" src="img/product3.jpg" alt="example">	
+			<img class="slideshow__img fade" src="img/product4.jpg" alt="example">
 			<span id="prev">&#10094;</span>
 			<span id="next">&#10095;</span>
 		</div>
