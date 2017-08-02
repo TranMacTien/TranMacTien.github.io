@@ -235,8 +235,11 @@ ul {
   font-size: 0.8em;
   padding: 30px 20px; }
 
+a:hover .read-more {
+  text-decoration: underline; }
+
 .read-more {
-  text-decoration: underline;
+  text-decoration: none;
   color: #db0000;
   display: inline-block; }
 
@@ -443,4 +446,4 @@ button:hover {
   padding-bottom: 40px; }
 
 #map {
-  height: 40vw; }
+  height: 250px; }
