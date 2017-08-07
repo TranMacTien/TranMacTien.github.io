@@ -75,42 +75,32 @@ ul {
   z-index: 100; }
 
 .nav-bar__logo-container {
-  position: relative;
-  height: inherit; }
+  float: left;
+  padding: 5px;
+  margin: auto 0; }
 
 .nav-bar__logo-container img {
-  position: absolute;
   display: inline-block;
   width: 50px;
-  top: 50%;
-  left: 10px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  vertical-align: -70%; }
 
 .nav-bar__logo-container h2 {
   color: #db0000;
+  display: inline-block;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 70px;
   font-size: 1.5em; }
 
+.toggle-btn-container {
+  /* width: 100%; */ }
+
 .toggle-btn {
-  display: block;
+  margin-top: 12px;
+  margin-right: 12px;
   cursor: pointer;
+  float: right;
   color: #db0000;
   font-size: 1.5em;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   border: 2px solid #db0000;
   border-radius: 5px;
   padding: 0 8px; }
@@ -127,6 +117,9 @@ ul {
 
 .menu {
   max-height: 0;
+  float: left;
+  width: 100%;
+  display: block;
   overflow: hidden;
   -webkit-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
@@ -154,31 +147,24 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
-  position: relative;
-  margin-top: 60px; }
+  width: 100%;
+  margin-top: 60px;
+  display: table; }
 
 .hero--news {
+  position: relative;
   height: 300px;
   background-image: url("../subpage/news/img/hero.jpeg"); }
 
 .container-align {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
-.container-align-hero {
-  width: 80%; }
+  padding: 0 30px;
+  display: table-cell;
+  vertical-align: middle; }
 
 .container-align--left-bottom {
-  top: auto;
-  bottom: 10px;
-  left: 10px;
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0); }
+  padding: 0 30px;
+  position: absolute;
+  bottom: 20px; }
 
 .container-align--left-bottom h1 {
   text-align: left;
