@@ -82,7 +82,7 @@ ul {
 .nav-bar__logo-container img {
   display: inline-block;
   width: 50px;
-  vertical-align: -70%; }
+  vertical-align: -15px; }
 
 .nav-bar__logo-container h2 {
   color: #db0000;
@@ -178,47 +178,47 @@ ul {
   text-align: center; }
 
 /* about ****************************************/
-#about {
+.section-about {
   background: white; }
 
-#about p {
+.section-about p {
   padding: 0 30px;
   font-size: 0.8em; }
 
-#about img {
+.section-about img {
   max-width: 100px; }
 
-#about h4 {
+.section-about h4 {
   font-weight: bold !important;
   padding: 5px;
   text-transform: uppercase; }
 
-#about p {
+.section-about p {
   font-size: 0.9em; }
 
 /* product *************************************/
-#product {
+.section-product {
   padding-bottom: 70px;
   background: white;
   text-align: center; }
 
-#product p {
+.section-product p {
   font-size: 0.8em;
   padding: 30px 20px; }
 
 /* news ***************************************/
-#news p {
+.section-news p {
   font-size: 0.9em; }
 
 /* history *********************************/
-#history {
+.section-history {
   background: white; }
 
 /* location */
-#location {
+.section-location {
   background: white; }
 
-#location .btn-container {
+.section-location .btn-container {
   padding: 40px 0;
   text-align: center; }
 
@@ -282,15 +282,15 @@ ul {
   padding-bottom: 20px; }
 
 /* product-list ************************/
-#product-list {
+.section-product-list {
   background: #eee; }
 
 /* news-list ***************************/
-#news-list, #event-list {
+.section-news-list, .section-event-list {
   background: white;
   padding-bottom: 50px; }
 
-#event-list > .img-container {
+.section-event-list > .img-container {
   padding-right: 3px;
   padding-left: 3px; }
 
