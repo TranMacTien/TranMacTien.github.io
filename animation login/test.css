@@ -219,9 +219,9 @@ body {
 
 .hello {
   visibility: hidden;
-  color: white;
-  text-align: center;
-  font-size: 2em; }
+  text-align: center; }
 
 .hello h1 {
+  color: white;
+  font-size: 2em;
   padding: 50px 0; }
