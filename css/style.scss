@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    font-family: "Muli", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+$yellow: #FED136;
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+h2 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #212529; //background: transparent;
+    position: fixed;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar__group {
+    float: right;
+    margin-right: 100px;
+}
+
+.navbar__item {
+    cursor: pointer;
+    color: white;
+    display: block;
+    float: left;
+    font-size: 1.2em;
+    padding: 30px 20px;
+    transition: 0.5s;
+}
+
+.navbar__item:hover,
+.navbar__item:active {
+    color: $yellow;
+}
+
+.navbar__item--home {
+    margin-left: 10%;
+}
+
+.hero {
+    background-image: url("../img/hero.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 200px;
+}
+
+.hero__title {
+    font-family: "Montserrat", "Arial", serif;
+    font-weight: 700;
+    font-size: 4em;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hero__subtitle {
+    font-family: "Droid Serif", "Arial", serif;
+    font-size: 2em;
+    font-style: italic;
+    color: white;
+}
+
+.logo-wrapper {
+    text-align: center;
+}
+
+.logo {
+    margin-top: -125px;
+    width: 250px;
+    height: 250px;
+    border: 10px solid white;
+    border-radius: 50%;
+}
+
+.section {
+    margin: 20px 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.section--about {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.section--skills>h2{
+    color: white;
+}
+
+.section--skills .line-below::after {
+    background: white;
+}
+
+.has-background {
+    background-image: url("../img/bg-skill.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+.line-below {
+    position: relative;
+    margin: 20px 0;
+}
+
+.line-below::after {
+    content: "";
+    display: block;
+    background: black;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 5px;
+}
+
+.info__item {
+    font-size: 1.2em;
+    width: 50%;
+    float: left;
+    margin: 20px 0;
+    padding-right: 20px;
+}
+
+.info__item li>span {
+    font-style: italic;
+}
+
+.skills__group{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.skills__item{
+    background: $yellow;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 200px;
+}
+.hidden{
+    display: none;
+}
+.skills__item:nth-child(odd){
+    background: white;
+}

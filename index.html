@@ -1,10 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Porfolio</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700i" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/logo.png">
 </head>
+
 <body>
-	<h1>Hello!</h1>
+	<nav class="navbar clearfix">
+		<span class="navbar__item navbar__item--home">Home</span>
+		<ul class="navbar__group">
+			<li class="navbar__item">About</li>
+			<li class="navbar__item">Skills</li>
+			<li class="navbar__item">Hobbies</li>
+			<li class="navbar__item">Work</li>
+			<li class="navbar__item">Contact</li>
+		</ul>
+	</nav>
+	<div class="hero">
+		<h1 class="hero__title">Tran Mac Tien</h1>
+		<h3 class="hero__subtitle">Front-end Web Developer</h2>
+	</div>
+	<div class="logo-wrapper">
+		<img class="logo" src="img/logo.png" alt="logo">
+	</div>
+	<section class="section section--about">
+		<h2 class="line-below">About me</h2>
+		<div class="info clearfix">
+			<div class="info__item">
+				<ul>
+					<li>Name:<span> Tran Mac Tien</span></li>
+					<li>Date of birth:<span> 11/07/1996</span></li>
+					<li>Student at Ho Chi Minh University of Science</span>
+					</li>
+					<li>Address:<span> 290B/33 Duong Ba Trac, Ward 1, District 8, Ho Chi Minh city</li>
+					<li>Phone:<span> +8416 4499 4657</span></li>
+				</ul>
+			</div>
+			<div class="info__item">
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat veniam optio expedita vitae eveniet modi animi sapiente
+					necessitatibus cum. Reiciendis consequuntur officiis animi possimus illo dolore tenetur ad, qui dolorem!
+				</p>
+			</div>
+		</div>
+	</section>
+	<div class="has-background">
+		<section class="section section--skills">
+			<h2 class="line-below">Skills</h2>
+			<ul class="skills__group clearfix">
+				<li class="skills__item">HTML/HTML5</li>
+				<li class="skills__item">CSS/CSS3</li>
+				<li class="skills__item">Java Script</li>
+				<li class="skills__item">Bootstrap Framework</li>
+				<li class="skills__item hidden"></li>
+				<li class="skills__item">SASS Preprocessor</li>
+				<li class="skills__item">BEM Methodology</li>
+				<li class="skills__item">C/C++</li>
+				<li class="skills__item">Java Basic</li>
+			</ul>
+		</section>
+	</div>
+	<section class="section">
+		<h2 class="line-below">Hobbies</h2>
+		<ul>
+			<li>Computing</li>
+			<li>Soccer</li>
+			<li>Video games</li>
+			<li>Music</li>
+		</ul>
+	</section>
+	<section class="section">
+		<h2 class="line-below">Work</h2>
+		<ul>
+			<li>BE PART OF MY STORY!</li>
+			<li><span>2011-2014 </span>Studying at Y Don High School</li>
+			<li><span>2014-2018 </span>Studying at Ho Chi Minh University of Science</li>
+			<li><span>July 2017 - now </span>Internship at OgilvyOne Vietnam</li>
+		</ul>
+	</section>
+	<h2 class="line-below">Contact me</h2>
+	<form action="">
+
+		<input type="text" name="name" placeholder="Your name*">
+		<input type="email" name="email" placeholder="Your email*" required>
+		<input type="text" name="message" placeholder="Your message*">
+		<button>Send</button>
+	</form>
+	<footer>
+		<span>&copy; 2017 by Tran Mac Tien. Created with Github</span>
+	</footer>
 </body>
+
 </html>
