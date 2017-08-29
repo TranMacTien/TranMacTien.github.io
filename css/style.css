@@ -7,6 +7,9 @@
   border: 0;
   outline: 0; }
 
+body {
+  background: white; }
+
 .clearfix::before,
 .clearfix::after {
   content: "";
@@ -17,6 +20,7 @@
 
 h2 {
   font-family: "Montserrat", "Arial", sans-serif;
+  color: #212529;
   font-weight: 700;
   font-size: 2.5em;
   text-transform: uppercase; }
@@ -118,7 +122,7 @@ li {
 .line-below::after {
   content: "";
   display: block;
-  background: black;
+  background: #212529;
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -137,22 +141,31 @@ li {
 
 .skills__group {
   margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 5%;
-  margin-right: 5%; }
+  margin-bottom: 50px; }
 
 .skills__item {
-  background: #FED136;
+  background: rgba(255, 255, 186, 0.8);
   display: block;
-  font-size: 1.5em;
-  font-weight: 700;
   float: left;
   text-align: center;
   width: 25%;
-  height: 200px; }
+  height: 250px;
+  position: relative; }
+
+.skills__item span {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #212529;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.skills__item:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.8); }
 
 .hidden {
   display: none; }
-
-.skills__item:nth-child(odd) {
-  background: white; }

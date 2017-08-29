@@ -1,3 +1,8 @@
+$light-gray: #EDEFF5;
+$yellow: #FED136;
+$yellow-opacity:rgba(255,255,186,0.8);
+$light-black:#212529;
+$font-montserrat: "Montserrat", "Arial", sans-serif;
 * {
     box-sizing: border-box;
     font-family: "Muli", "Arial", sans-serif;
@@ -6,7 +11,11 @@
     border: 0;
     outline: 0;
 }
-$yellow: #FED136;
+
+body {
+    background: white;
+}
+
 .clearfix::before,
 .clearfix::after {
     content: "";
@@ -18,7 +27,8 @@ $yellow: #FED136;
 }
 
 h2 {
-    font-family: "Montserrat", "Arial", sans-serif;
+    font-family: $font-montserrat;
+    color: $light-black;
     font-weight: 700;
     font-size: 2.5em;
     text-transform: uppercase;
@@ -32,7 +42,7 @@ li {
 }
 
 .navbar {
-    background: #212529; //background: transparent;
+    background: $light-black; //background: transparent;
     position: fixed;
     position: fixed;
     width: 100%;
@@ -111,7 +121,7 @@ li {
     margin-bottom: 150px;
 }
 
-.section--skills>h2{
+.section--skills>h2 {
     color: white;
 }
 
@@ -136,7 +146,7 @@ li {
 .line-below::after {
     content: "";
     display: block;
-    background: black;
+    background: $light-black;
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -156,25 +166,34 @@ li {
     font-style: italic;
 }
 
-.skills__group{
+.skills__group {
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 5%;
-    margin-right: 5%;
 }
-.skills__item{
-    background: $yellow;
+
+.skills__item {
+    background: $yellow-opacity;
     display: block;
-    font-size: 1.5em;
-    font-weight: 700;
     float: left;
     text-align: center;
     width: 25%;
-    height: 200px;
+    height: 250px;
+    position: relative;
 }
-.hidden{
+.skills__item span{
+    font-family: $font-montserrat;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: $light-black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.skills__item:nth-child(odd) {
+    background: rgba(255,255,255,0.8);
+}
+
+.hidden {
     display: none;
-}
-.skills__item:nth-child(odd){
-    background: white;
 }
