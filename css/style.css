@@ -171,14 +171,22 @@ li {
   background: rgba(255, 255, 255, 0.8); }
 
 .hobbies-group {
-  margin: 100px 0; }
+  margin: 50px 0; }
 
-.hobbies-group figure {
-  padding: 0 10px;
+.hobbies-image {
+  padding: 15px;
   width: 33.3333333333333333%;
-  float: left; }
+  float: left;
+  text-align: center; }
+
+.hobbies-image figcaption {
+  background: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 20px 0; }
 
 .hobbies-group img {
+  display: block;
   width: 100%; }
 
 .hidden {

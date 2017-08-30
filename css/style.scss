@@ -2,7 +2,9 @@ $light-gray: #EDEFF5;
 $yellow: #FFC600;
 $black-opacity:rgba(170, 170, 170, 0.80);
 $light-black:#212529;
-$font-montserrat: "Montserrat", "Arial", sans-serif;
+$font-montserrat: "Montserrat",
+"Arial",
+sans-serif;
 * {
     box-sizing: border-box;
     font-family: "Muli", "Arial", sans-serif;
@@ -127,10 +129,12 @@ li {
 .section--skills .line-below::after {
     background: white;
 }
-.background-hobbies{
+
+.background-hobbies {
     background: $light-gray;
     padding: 50px 0;
 }
+
 .background-skills {
     background-image: url("../img/bg-skill.jpg");
     background-attachment: fixed;
@@ -182,28 +186,43 @@ li {
     height: 250px;
     position: relative;
 }
-.skills__item span{
+
+.skills__item span {
     font-family: $font-montserrat;
     font-size: 1.8em;
     font-weight: 700;
     color: $light-black;
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .skills__item:nth-child(odd) {
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
-.hobbies-group{
-    margin: 100px 0;
+
+.hobbies-group {
+    margin: 50px 0;
 }
-.hobbies-group figure{
-    padding: 0 10px;
+
+.hobbies-image {
+    padding: 15px;
     width: 33.3333333333333333%;
     float: left;
+    text-align: center;
 }
-.hobbies-group img{
+
+.hobbies-image figcaption {
+    background: white;
+   // font-family: $font-montserrat;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.hobbies-group img {
+    display: block;
     width: 100%;
 }
 
