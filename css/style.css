@@ -210,11 +210,14 @@ li {
   margin-left: 50%; }
 
 .work__item {
-  font-size: 1.2em;
+  font-size: 1.5em;
   display: block;
-  margin: 100px 0;
+  margin: 200px 0;
   position: relative;
   width: 50%; }
+
+.work__item:first-child {
+  margin-top: 50px; }
 
 .work__item img {
   width: 180px;
@@ -222,6 +225,7 @@ li {
   border: 8px solid #EDEFF5; }
 
 .work__item span {
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700; }
 
 .work__item:nth-child(odd) {
@@ -249,7 +253,7 @@ li {
   margin-right: 120px; }
 
 .work__content {
-  margin-top: -120px; }
+  margin-top: -130px; }
 
 .start {
   background: #FFC600;

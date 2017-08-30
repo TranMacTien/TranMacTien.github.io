@@ -248,13 +248,15 @@ li {
 }
 
 .work__item {
-    font-size: 1.2em;
+    font-size: 1.5em;
     display: block;
-    margin: 100px 0;
+    margin: 200px 0;
     position: relative;
     width: 50%;
 }
-
+.work__item:first-child{
+    margin-top: 50px;
+}
 .work__item img {
     width: 180px;
     border-radius: 50%;
@@ -262,6 +264,7 @@ li {
 }
 
 .work__item span {
+    font-family: $font-montserrat;
     font-weight: 700;
 }
 
@@ -292,7 +295,7 @@ li {
 }
 
 .work__content {
-    margin-top: -120px;
+    margin-top: -130px;
 }
 
 .start {
