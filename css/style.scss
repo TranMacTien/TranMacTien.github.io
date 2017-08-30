@@ -248,9 +248,10 @@ li {
 }
 
 .work__item {
-    position: relative;
-    margin: 100px 0;
+    font-size: 1.2em;
     display: block;
+    margin: 100px 0;
+    position: relative;
     width: 50%;
 }
 
@@ -268,7 +269,9 @@ li {
     border-radius: 50%;
     border: 8px solid $light-gray;
 }
-
+.work__item span{
+    font-weight: 700;
+}
 .work__item:nth-child(2n) img,
 .start {
     transform: translateX(-50%);
