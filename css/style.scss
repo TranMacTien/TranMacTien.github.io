@@ -198,9 +198,13 @@ li {
 .hobbies-group{
     margin: 100px 0;
 }
+.hobbies-group figure{
+    padding: 0 10px;
+    width: 33.3333333333333333%;
+    float: left;
+}
 .hobbies-group img{
-    width: 25%;
-    height: auto;
+    width: 100%;
 }
 
 .hidden {
