@@ -1,6 +1,6 @@
 $light-gray: #EDEFF5;
-$yellow: #FED136;
-$yellow-opacity:rgba(255,255,186,0.8);
+$yellow: #FFC600;
+$black-opacity:rgba(170, 170, 170, 0.80);
 $light-black:#212529;
 $font-montserrat: "Montserrat", "Arial", sans-serif;
 * {
@@ -60,7 +60,7 @@ li {
     display: block;
     float: left;
     font-size: 1.2em;
-    padding: 30px 20px;
+    padding: 15px 20px;
     transition: 0.5s;
 }
 
@@ -112,8 +112,8 @@ li {
 
 .section {
     margin: 20px 0;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .section--about {
@@ -128,8 +128,11 @@ li {
 .section--skills .line-below::after {
     background: white;
 }
-
-.has-background {
+.background-hobbies{
+    background: $light-gray;
+    padding: 50px 0;
+}
+.background-skills {
     background-image: url("../img/bg-skill.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -172,7 +175,7 @@ li {
 }
 
 .skills__item {
-    background: $yellow-opacity;
+    background: $black-opacity;
     display: block;
     float: left;
     text-align: center;
@@ -192,6 +195,13 @@ li {
 }
 .skills__item:nth-child(odd) {
     background: rgba(255,255,255,0.8);
+}
+.hobbies-group{
+    margin: 100px 0;
+}
+.hobbies-group img{
+    width: 25%;
+    height: auto;
 }
 
 .hidden {

@@ -48,14 +48,14 @@ li {
   display: block;
   float: left;
   font-size: 1.2em;
-  padding: 30px 20px;
+  padding: 15px 20px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
 
 .navbar__item:hover,
 .navbar__item:active {
-  color: #FED136; }
+  color: #FFC600; }
 
 .navbar__item--home {
   margin-left: 10%; }
@@ -94,8 +94,8 @@ li {
 
 .section {
   margin: 20px 0;
-  margin-left: 10%;
-  margin-right: 10%; }
+  margin-left: 15%;
+  margin-right: 15%; }
 
 .section--about {
   margin-top: 100px;
@@ -107,7 +107,11 @@ li {
 .section--skills .line-below::after {
   background: white; }
 
-.has-background {
+.background-hobbies {
+  background: #EDEFF5;
+  padding: 50px 0; }
+
+.background-skills {
   background-image: url("../img/bg-skill.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -144,7 +148,7 @@ li {
   margin-bottom: 50px; }
 
 .skills__item {
-  background: rgba(255, 255, 186, 0.8);
+  background: rgba(170, 170, 170, 0.8);
   display: block;
   float: left;
   text-align: center;
@@ -166,6 +170,13 @@ li {
 
 .skills__item:nth-child(odd) {
   background: rgba(255, 255, 255, 0.8); }
+
+.hobbies-group {
+  margin: 100px 0; }
+
+.hobbies-group img {
+  width: 25%;
+  height: auto; }
 
 .hidden {
   display: none; }
