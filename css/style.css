@@ -171,23 +171,91 @@ li {
   background: rgba(255, 255, 255, 0.8); }
 
 .hobbies-group {
-  margin: 50px 0; }
+  margin: 50px -15px; }
 
 .hobbies-image {
   padding: 15px;
   width: 33.3333333333333333%;
   float: left;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+
+.hobbies-image:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
 
 .hobbies-image figcaption {
   background: white;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 700;
   padding: 20px 0; }
 
 .hobbies-group img {
   display: block;
   width: 100%; }
+
+.work-group {
+  position: relative; }
+
+.work-group::before {
+  content: '';
+  background: #EDEFF5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: 50%; }
+
+.work__item {
+  position: relative;
+  margin: 100px 0;
+  display: block;
+  width: 50%; }
+
+.work__item:nth-child(2n+1) {
+  text-align: right; }
+
+.work__item:nth-child(2n) {
+  text-align: left;
+  margin-left: 50%; }
+
+.work__item img {
+  width: 180px;
+  border-radius: 50%;
+  border: 8px solid #EDEFF5; }
+
+.work__item:nth-child(2n) img,
+.start {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.work__item:nth-child(2n+1) img {
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%); }
+
+.start {
+  background: #FFC600;
+  border-radius: 50%;
+  border: 8px solid #EDEFF5;
+  font-weight: 700;
+  height: 180px;
+  position: relative;
+  text-align: center;
+  width: 180px; }
+
+.start::after {
+  content: 'BE PART OF MY STORY!';
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 .hidden {
   display: none; }

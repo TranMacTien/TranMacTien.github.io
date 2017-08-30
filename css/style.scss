@@ -5,6 +5,9 @@ $light-black:#212529;
 $font-montserrat: "Montserrat",
 "Arial",
 sans-serif;
+$font-droid-serif: "Droid Serif",
+"Arial",
+serif;
 * {
     box-sizing: border-box;
     font-family: "Muli", "Arial", sans-serif;
@@ -93,7 +96,7 @@ li {
 }
 
 .hero__subtitle {
-    font-family: "Droid Serif", "Arial", serif;
+    font-family: $font-droid-serif;
     font-size: 2em;
     font-style: italic;
     color: white;
@@ -203,7 +206,7 @@ li {
 }
 
 .hobbies-group {
-    margin: 50px 0;
+    margin: 50px -15px;
 }
 
 .hobbies-image {
@@ -211,12 +214,16 @@ li {
     width: 33.3333333333333333%;
     float: left;
     text-align: center;
+    transition: 0.3s ease;
+}
+
+.hobbies-image:hover {
+    transform: scale(1.05);
 }
 
 .hobbies-image figcaption {
     background: white;
-   // font-family: $font-montserrat;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 700;
     padding: 20px 0;
 }
@@ -224,6 +231,70 @@ li {
 .hobbies-group img {
     display: block;
     width: 100%;
+}
+
+.work-group {
+    position: relative;
+}
+
+.work-group::before {
+    content: '';
+    background: $light-gray;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    margin-left: 50%;
+}
+
+.work__item {
+    position: relative;
+    margin: 100px 0;
+    display: block;
+    width: 50%;
+}
+
+.work__item:nth-child(2n+1) {
+    text-align: right;
+}
+
+.work__item:nth-child(2n) {
+    text-align: left;
+    margin-left: 50%;
+}
+
+.work__item img {
+    width: 180px;
+    border-radius: 50%;
+    border: 8px solid $light-gray;
+}
+
+.work__item:nth-child(2n) img,
+.start {
+    transform: translateX(-50%);
+}
+
+.work__item:nth-child(2n+1) img {
+    transform: translateX(50%);
+}
+
+.start {
+    background: $yellow;
+    border-radius: 50%;
+    border: 8px solid $light-gray;
+    font-weight: 700;
+    height: 180px;
+    position: relative;
+    text-align: center;
+    width: 180px;
+}
+
+.start::after {
+    content: 'BE PART OF MY STORY!';
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hidden {
