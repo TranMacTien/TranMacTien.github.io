@@ -4,14 +4,6 @@ toggle.addEventListener('click', function () {
     document.querySelector('.navbar__group').classList.toggle('navbar__group--toggle');
 });
 /* media query */
-var mq = window.matchMedia("screen and (min-width: 900px)");
-mq.addListener(function () {
-    if (this.matches) {
-        document.querySelector('.wrapper').classList.remove('clearfix');
-    } else {
-        document.querySelector('.wrapper').classList.add('clearfix');
-    }
-});
 var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {

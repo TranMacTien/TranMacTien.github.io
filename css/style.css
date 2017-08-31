@@ -43,6 +43,7 @@ li {
 
 .navbar {
   background: #212529;
+  font-size: 1.5em;
   position: fixed;
   width: 100%;
   z-index: 100; }
@@ -55,17 +56,17 @@ li {
   color: #FFC600; }
 
 .navbar__item--home {
-  font-size: 1.5em;
   padding: 15px 20px;
   float: left; }
 
 @media screen and (max-width: 900px) {
   .navbar__group {
-    max-height: 0; } }
+    max-height: 0;
+    float: left;
+    width: 100%; } }
 
 .navbar__group {
   overflow: hidden;
-  font-size: 1.5em;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
@@ -131,6 +132,10 @@ li {
   text-align: center;
   padding: 150px 20px; }
 
+@media screen and (min-width: 900px) {
+  .hero {
+    padding: 250px 20px; } }
+
 .hero__title {
   font-family: "Montserrat", "Arial", serif;
   font-weight: 700;
@@ -170,7 +175,6 @@ li {
     -o-transition: 0.5s;
     transition: 0.5s; }
   .navbar__item--home {
-    font-size: 1.5em;
     margin-left: 10%; } }
 
 .logo-wrapper {
@@ -240,7 +244,8 @@ li {
 
 @media screen and (min-width: 900px) {
   .section {
-    padding: 50px 10%; } }
+    padding: 50px 10%;
+    padding-bottom: 100px; } }
 
 .skills__group {
   margin-top: 50px;
