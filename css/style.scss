@@ -81,7 +81,7 @@ li {
     float: left;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .navbar__group {
         max-height: 0;
         float: left;
@@ -95,7 +95,7 @@ li {
 }
 
 .navbar__group--toggle {
-    max-height: 500px;
+    max-height: 800px;
 }
 
 .toggle-button,
@@ -156,7 +156,7 @@ li {
     padding: 150px 20px;
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1000px) {
     .hero {
         padding: 250px 20px;
     }
@@ -181,7 +181,7 @@ li {
     padding: 20px 30px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .toggle-button {
         display: none;
     }
@@ -292,7 +292,7 @@ li {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .section {
         padding: 50px 10%;
         padding-bottom: 100px;
@@ -321,7 +321,7 @@ li {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .skills__item {
         width: 25%;
         height: 250px;
@@ -413,7 +413,7 @@ li {
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .hobbies-image {
         width: 33.3333333333333333%;
     }
@@ -497,7 +497,7 @@ li {
     }
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1000px) {
     .work-group::before {
         margin-left: 50%;
     }
@@ -585,7 +585,7 @@ li {
     font-size: 2em;
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:1000px) {
     .contact__input {
         width: 49%;
         margin: 20px 0;

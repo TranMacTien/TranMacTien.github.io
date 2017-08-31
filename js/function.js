@@ -20,3 +20,26 @@ window.addEventListener('scroll', function () {
         }
     }
 });
+if (matchMedia) {
+    const mq = window.matchMedia("(min-width: 1000px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+    if (mq.matches) {
+        var currNode = document.getElementsByClassName('skills__item')[4];
+        var newNode = document.createElement('li');
+        newNode.classList.add('skills__item');
+        newNode.style.display = 'none';
+        document.querySelector('.skills__group').insertBefore(newNode, currNode);
+
+
+    } else {
+        var removeNode = document.getElementsByClassName('skills__item')[4];
+        if (removeNode.style.display === 'none') {
+            removeNode.remove();
+        }
+    }
+}
