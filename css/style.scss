@@ -132,9 +132,11 @@ li {
 .section--white-title .line-below::after {
     background: white;
 }
-[class^="background-"]{
+
+[class^="background-"] {
     padding: 50px 0;
 }
+
 .background-hobbies {
     background: $light-gray;
 }
@@ -143,10 +145,12 @@ li {
     background: url("../img/bg-skill.jpg") no-repeat fixed center;
     background-size: cover;
 }
-.background-contact{
+
+.background-contact {
     background: url("../img/bg-contact.jpg") no-repeat fixed center;
     background-size: cover;
 }
+
 .line-below {
     position: relative;
     margin: 20px 0;
@@ -252,12 +256,14 @@ li {
     width: 50%;
 }
 
-.work__item:first-child{
+.work__item:first-child {
     margin-top: 50px;
 }
+
 .work__item:last-child {
     margin-bottom: 50px;
 }
+
 .work__item img {
     width: 180px;
     border-radius: 50%;
@@ -317,11 +323,46 @@ li {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.form-container{
 
+.form-container {
+    margin: 50px 0;
 }
-.form-container input{
-    padding: 10px;
+
+.contact__input {
+    display: block;
+    width: 49%;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.contact__input:first-child {
+    float: left;
+}
+
+.contact__input:nth-child(2) {
+    float: right;
+}
+
+.contact__input:nth-child(3) {
+    resize: none;
+    width: 100%;
+}
+
+.contact__button {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 80px;
+    border-radius: 5px;
+    background-color: $yellow;
+}
+.contact__button span{
+    font-family: $font-montserrat;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
 }
 .hidden {
     display: none;
