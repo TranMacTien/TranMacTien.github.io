@@ -100,23 +100,25 @@ li {
   margin-top: 100px;
   margin-bottom: 150px; }
 
-.section--skills > h2 {
+.section--white-title > h2 {
   color: white; }
 
-.section--skills .line-below::after {
+.section--white-title .line-below::after {
   background: white; }
 
-.background-hobbies {
-  background: #EDEFF5;
+[class^="background-"] {
   padding: 50px 0; }
 
+.background-hobbies {
+  background: #EDEFF5; }
+
 .background-skills {
-  background-image: url("../img/bg-skill.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 50px 0; }
+  background: url("../img/bg-skill.jpg") no-repeat fixed center;
+  background-size: cover; }
+
+.background-contact {
+  background: url("../img/bg-contact.jpg") no-repeat fixed center;
+  background-size: cover; }
 
 .line-below {
   position: relative;
@@ -267,14 +269,16 @@ li {
   text-align: center;
   width: 180px; }
 
-.start::after {
-  content: 'BE PART OF MY STORY!';
+.start > span {
   left: 50%;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.form-container input {
+  padding: 10px; }
 
 .hidden {
   display: none; }
