@@ -20,7 +20,6 @@ serif;
 body {
     background: white;
 }
-
 .clearfix::before,
 .clearfix::after {
     content: "";
@@ -47,12 +46,14 @@ li {
 }
 
 .navbar {
-    background: $light-black;
+    background: transparent;
     position: fixed;
     width: 100%;
     z-index: 100;
 }
-
+.navbar--collapse{
+    background: $light-black;
+}
 .navbar__group {
     float: right;
     margin-right: 100px;
@@ -64,15 +65,23 @@ li {
     display: block;
     float: left;
     font-size: 1.2em;
-    padding: 15px 20px;
+    padding: 40px 20px;
     transition: 0.5s;
 }
 
-.navbar__item:hover,
-.navbar__item:active {
-    color: $yellow;
+.navbar__item--collapse{
+    padding: 15px 20px;
+}
+.navbar__item a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
 }
 
+.navbar__item a:hover,
+.navbar__item a:active {
+    color: $yellow;
+}
 .navbar__item--home {
     margin-left: 10%;
 }

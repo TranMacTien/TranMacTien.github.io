@@ -32,10 +32,13 @@ li {
   padding: 0; }
 
 .navbar {
-  background: #212529;
+  background: transparent;
   position: fixed;
   width: 100%;
   z-index: 100; }
+
+.navbar--collapse {
+  background: #212529; }
 
 .navbar__group {
   float: right;
@@ -47,13 +50,23 @@ li {
   display: block;
   float: left;
   font-size: 1.2em;
-  padding: 15px 20px;
+  padding: 40px 20px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
 
-.navbar__item:hover,
-.navbar__item:active {
+.navbar__item--collapse {
+  padding: 15px 20px; }
+
+.navbar__item a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.navbar__item a:hover,
+.navbar__item a:active {
   color: #FFC600; }
 
 .navbar__item--home {
