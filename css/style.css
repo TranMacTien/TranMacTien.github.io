@@ -98,7 +98,10 @@ li {
 
 .section--about {
   margin-top: 100px;
-  margin-bottom: 150px; }
+  margin-bottom: 100px; }
+
+.section--work {
+  margin-top: 70px; }
 
 .section--white-title > h2 {
   color: white; }
@@ -146,7 +149,7 @@ li {
   margin-bottom: 50px; }
 
 .skills__item {
-  background: rgba(170, 170, 170, 0.8);
+  background: rgba(170, 170, 170, 0.5);
   display: block;
   float: left;
   text-align: center;
@@ -165,6 +168,30 @@ li {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.skills__item:nth-child(1) span {
+  color: #E54F27; }
+
+.skills__item:nth-child(2) span {
+  color: #077DBB; }
+
+.skills__item:nth-child(3) span {
+  color: #F0DB4F; }
+
+.skills__item:nth-child(4) span {
+  color: #61408F; }
+
+.skills__item:nth-child(5) span {
+  color: #212529; }
+
+.skills__item:nth-child(6) span {
+  color: #CD669A; }
+
+.skills__item:nth-child(7) span {
+  color: #649AD2; }
+
+.skills__item:nth-child(8) span {
+  color: #EA2D2F; }
 
 .skills__item--white {
   background: rgba(255, 255, 255, 0.8); }
@@ -282,6 +309,8 @@ li {
 
 .contact__input {
   display: block;
+  -webkit-box-shadow: 0px 2px 10px #414141;
+  box-shadow: 0px 2px 10px #414141;
   width: 49%;
   border-radius: 5px;
   font-size: 1.2em;
@@ -300,11 +329,24 @@ li {
 
 .contact__button {
   cursor: pointer;
+  -webkit-box-shadow: 0px 2px 10px #414141;
+  box-shadow: 0px 2px 10px #414141;
   display: block;
   margin: 0 auto;
   padding: 15px 80px;
   border-radius: 5px;
-  background-color: #FFC600; }
+  background-color: #FFC600;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.contact__button:hover {
+  background-color: #eab300; }
+
+.contact__button:active {
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px); }
 
 .contact__button span {
   font-family: "Montserrat", "Arial", sans-serif;
@@ -312,5 +354,8 @@ li {
   font-weight: 700;
   font-size: 2em; }
 
-.hidden {
-  display: none; }
+footer {
+  background: #212529;
+  color: white;
+  padding: 30px;
+  text-align: center; }

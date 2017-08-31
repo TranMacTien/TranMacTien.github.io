@@ -1,6 +1,6 @@
 $light-gray: #EDEFF5;
 $yellow: #FFC600;
-$black-opacity:rgba(170, 170, 170, 0.80);
+$black-opacity:rgba(170, 170, 170, 0.5);
 $light-black:#212529;
 $font-montserrat: "Montserrat",
 "Arial",
@@ -122,7 +122,11 @@ li {
 
 .section--about {
     margin-top: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+}
+
+.section--work {
+    margin-top: 70px;
 }
 
 .section--white-title>h2 {
@@ -201,6 +205,30 @@ li {
     transform: translate(-50%, -50%);
 }
 
+.skills__item:nth-child(1) span{
+    color: #E54F27;
+}
+.skills__item:nth-child(2) span{
+    color: #077DBB;
+}
+.skills__item:nth-child(3) span{
+    color: #F0DB4F;
+}
+.skills__item:nth-child(4) span{
+    color: #61408F;
+}
+.skills__item:nth-child(5) span{
+    color: $light-black;
+}
+.skills__item:nth-child(6) span{
+    color: #CD669A;
+}
+.skills__item:nth-child(7) span{
+    color: #649AD2;
+}
+.skills__item:nth-child(8) span{
+    color: #EA2D2F;
+}
 .skills__item--white {
     background: rgba(255, 255, 255, 0.8);
 }
@@ -330,6 +358,7 @@ li {
 
 .contact__input {
     display: block;
+    box-shadow: 0px 2px 10px #414141;
     width: 49%;
     border-radius: 5px;
     font-size: 1.2em;
@@ -352,18 +381,33 @@ li {
 
 .contact__button {
     cursor: pointer;
+    box-shadow: 0px 2px 10px #414141;
     display: block;
     margin: 0 auto;
     padding: 15px 80px;
     border-radius: 5px;
     background-color: $yellow;
+    transition: 0.3s;
 }
-.contact__button span{
+
+.contact__button:hover {
+    background-color: #eab300;
+}
+
+.contact__button:active {
+    transform: translateY(2px);
+}
+
+.contact__button span {
     font-family: $font-montserrat;
     color: white;
     font-weight: 700;
     font-size: 2em;
 }
-.hidden {
-    display: none;
+
+footer {
+    background: $light-black;
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
