@@ -3,7 +3,7 @@ toggle.addEventListener('click', function () {
     this.classList.toggle('toggle-button--close');
     document.querySelector('.navbar__group').classList.toggle('navbar__group--toggle');
 });
-/* media query */
+
 var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {

@@ -155,8 +155,9 @@ li {
     text-align: center;
     padding: 150px 20px;
 }
-@media screen and (min-width:900px){
-    .hero{
+
+@media screen and (min-width:900px) {
+    .hero {
         padding: 250px 20px;
     }
 }
@@ -226,6 +227,7 @@ li {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
 .info__item li {
     margin-left: 15px;
     list-style-type: circle;
@@ -323,6 +325,9 @@ li {
     .skills__item {
         width: 25%;
         height: 250px;
+    }
+    .skills__item:nth-child(even) {
+        background: rgba(255, 255, 255, 0.8);
     }
 }
 
