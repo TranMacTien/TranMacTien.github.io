@@ -78,7 +78,7 @@ li {
 }
 
 .hero {
-    background-image: url("../img/hero.png");
+    background-image: url("../img/hero.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -197,7 +197,7 @@ li {
     transform: translate(-50%, -50%);
 }
 
-.skills__item:nth-child(odd) {
+.skills__item--white {
     background: rgba(255, 255, 255, 0.8);
 }
 
@@ -219,8 +219,9 @@ li {
 
 .hobbies-image figcaption {
     background: white;
+    font-family: $font-montserrat;
     font-size: 1.6em;
-    font-weight: 700;
+    font-weight: 400;
     padding: 20px 0;
 }
 
@@ -251,10 +252,12 @@ li {
     width: 50%;
 }
 
-.work__item:first-child {
+.work__item:first-child{
     margin-top: 50px;
 }
-
+.work__item:last-child {
+    margin-bottom: 50px;
+}
 .work__item img {
     width: 180px;
     border-radius: 50%;
@@ -300,6 +303,7 @@ li {
     background: $yellow;
     border-radius: 50%;
     border: 8px solid $light-gray;
+    font-family: $font-montserrat;
     font-weight: 700;
     height: 180px;
     position: relative;
