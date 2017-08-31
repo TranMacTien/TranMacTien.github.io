@@ -34,8 +34,6 @@ function WidthChange(mq) {
         newNode.classList.add('skills__item');
         newNode.style.display = 'none';
         document.querySelector('.skills__group').insertBefore(newNode, currNode);
-
-
     } else {
         var removeNode = document.getElementsByClassName('skills__item')[4];
         if (removeNode.style.display === 'none') {
