@@ -1,4 +1,16 @@
-var navBar = document.querySelector('.navbar');
+var toggle = document.querySelector('.toggle-button');
+console.log(toggle);
+toggle.addEventListener('click', function () {
+/*     var isVisible = toggle.style.visibility;
+    if (isVisible === 'visible') {
+        toggle.style.visibility='hidden';
+    }else{
+        toggle.style.visibility='visible';
+    } */
+    this.classList.toggle('toggle-button--close');
+    document.querySelector('.navbar__group').classList.toggle('navbar__group--toggle');
+});
+/* var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {
     var scroll = document.body.scrollTop;
@@ -13,4 +25,4 @@ window.addEventListener('scroll', function () {
             navBarItem[i].classList.remove('navbar__item--collapse');
         }
     }
-});
+}); */
