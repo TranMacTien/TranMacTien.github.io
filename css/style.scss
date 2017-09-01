@@ -65,6 +65,7 @@ li {
     position: fixed;
     width: 100%;
     z-index: 100;
+    transition: 0.5s ease;
 }
 
 .navbar__item {
@@ -90,8 +91,8 @@ li {
 }
 
 .navbar__group {
+    transition: 0.5s ease;
     overflow: hidden;
-    transition: 0.3s;
 }
 
 .navbar__group--toggle {
@@ -118,7 +119,7 @@ li {
 .toggle-button:after {
     content: '';
     position: absolute;
-    transition: 0.3s;
+    transition: 0.5s ease;
 }
 
 .toggle-button:before {
@@ -196,15 +197,12 @@ li {
         margin-right: 100px;
     }
     .navbar__item {
+        transition: 0.5s ease;
         float: left;
         padding: 40px 20px;
-        transition: 0.5s;
     }
     .navbar__item--collapse {
         padding: 15px 20px;
-    }
-    .navbar__item a {
-        transition: 0.5s;
     }
     .navbar__item--home {
         margin-left: 10%;
@@ -224,6 +222,7 @@ li {
 }
 
 .section--about {
+    opacity: 0;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -233,11 +232,13 @@ li {
     list-style-type: circle;
 }
 
-.section--white-title>h2 {
+.section--skills>h2,
+.section--contact>h2 {
     color: white;
 }
 
-.section--white-title .line-below::after {
+.section--skills .line-below::after,
+.section--contact .line-below::after {
     background: white;
 }
 
@@ -300,6 +301,8 @@ li {
 }
 
 .skills__group {
+    opacity: 0;
+    transform: translateY(-20px);
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -347,11 +350,12 @@ li {
     background: rgba(255, 255, 255, 0.8);
 }
 
-.hobbies-group {
+.hobbies__group {
+    opacity: 0;
     margin: 50px -15px;
 }
 
-.hobbies-image {
+.hobbies__image {
     padding: 15px;
     width: 100%;
     float: left;
@@ -362,11 +366,12 @@ li {
     overflow: hidden;
 }
 
-.hobbies-image:hover img {
-    transform: scale(1.05);
+.hobbies__image:hover img {
+    // filter: blur(2px);
+    transform: scale(1.1);
 }
 
-.hobbies-image figcaption {
+.hobbies__image figcaption {
     background: white;
     font-family: $font-montserrat;
     font-size: 1.6em;
@@ -374,20 +379,20 @@ li {
     padding: 20px 0;
 }
 
-.hobbies-group img {
+.hobbies__group img {
     display: block;
     width: 100%;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 
 @media screen and (min-width: 600px) {
-    .hobbies-image {
+    .hobbies__image {
         width: 50%;
     }
 }
 
 @media screen and (min-width: 1000px) {
-    .hobbies-image {
+    .hobbies__image {
         width: 33.3333333333333333%;
     }
 }
@@ -470,7 +475,7 @@ li {
     }
 }
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
     .work-group::before {
         margin-left: 50%;
     }
@@ -497,6 +502,7 @@ li {
         transform: translateX(-50%);
     }
     .work__item:nth-child(even) .work__content {
+        transform: translateX(200px);
         margin-left: 120px;
         margin-right: 0;
     }
@@ -504,11 +510,19 @@ li {
         transform: translateX(50%);
     }
     .work__item:nth-child(odd) .work__content {
+        transform: translateX(-200px);
         margin-right: 120px;
         margin-left: 0;
     }
     .work__content {
+        opacity: 0;
         margin-top: -130px;
+        transition: 1s ease;
+    }
+    .work__item:nth-child(odd) .work__content.loaded2,
+    .work__item:nth-child(even) .work__content.loaded2 {
+        opacity: 1;
+        transform: translateX(0);
     }
     .start {
         margin-left: 0;
@@ -519,6 +533,7 @@ li {
 }
 
 .form-container {
+    opacity: 0;
     margin: 30px 0;
 }
 
@@ -540,7 +555,6 @@ li {
     padding: 10px 40px;
     border-radius: 5px;
     background-color: $yellow;
-    transition: 0.3s;
 }
 
 .contact__button:hover {
@@ -582,4 +596,10 @@ footer {
     color: white;
     padding: 30px;
     text-align: center;
+}
+
+.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 2s ease;
 }
