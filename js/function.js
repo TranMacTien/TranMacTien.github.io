@@ -8,15 +8,41 @@ var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    // console.log(scroll);
+    console.log(scroll);
+    menuActive(scroll);
     navbarEffect(scroll);
     lazyLoading(scroll);
 });
+
 // after page loading
 window.addEventListener('load', function () {
     document.querySelector('.hero__title').classList.add('loaded');
     document.querySelector('.hero__subtitle').classList.add('loaded');
 });
+
+function menuActive(scroll) {
+    for (var i = 0; i < navBarItem.length; i++) {
+        navBarItem[i].classList.remove('navbar__item--active');
+    }
+    if (scroll < 400) {
+        navBarItem[0].classList.add('navbar__item--active');
+    }
+    if (scroll >= 400 && scroll < 1000) {
+        navBarItem[1].classList.add('navbar__item--active');
+    }
+    if (scroll >= 1000 && scroll < 1800) {
+        navBarItem[2].classList.add('navbar__item--active');
+    }
+    if (scroll >= 1800 && scroll < 2700) {
+        navBarItem[3].classList.add('navbar__item--active');
+    }
+    if (scroll >= 2700 && scroll < 4300) {
+        navBarItem[4].classList.add('navbar__item--active');
+    }
+    if (scroll >= 4300) {
+        navBarItem[5].classList.add('navbar__item--active');
+    }
+}
 
 function lazyLoading(scroll) {
     var aboutSection = document.querySelector('.section--about');
@@ -62,7 +88,7 @@ function navbarEffect(scroll) {
 
 //  responsive
 if (matchMedia) {
-    const mq = window.matchMedia("(min-width: 1000px)");
+    var mq = window.matchMedia("(min-width: 1000px)");
     mq.addListener(WidthChange);
     WidthChange(mq);
 }
