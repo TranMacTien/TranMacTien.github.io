@@ -156,11 +156,7 @@ li {
     padding: 150px 20px;
 }
 
-@media screen and (min-width:1000px) {
-    .hero {
-        padding: 250px 20px;
-    }
-}
+
 
 .hero__title {
     font-family: "Montserrat", "Arial", serif;
@@ -180,7 +176,14 @@ li {
 .section {
     padding: 20px 30px;
 }
-
+@media screen and (min-width:1000px) {
+    .hero {
+        padding: 250px 20px;
+    }
+    .hero__title {
+        font-size: 4em;
+    }
+}
 @media screen and (min-width: 1000px) {
     .toggle-button {
         display: none;
@@ -600,5 +603,5 @@ footer {
 .loaded {
     opacity: 1;
     transform: translateY(0);
-    transition: 2s ease;
+    transition: 1.6s ease;
 }

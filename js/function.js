@@ -36,7 +36,7 @@ function lazyLoading(scroll) {
             })();
         }
     }
-    if (scroll > 4000) {
+    if (scroll > 4200) {
         form.classList.add('loaded');
     }
 }
