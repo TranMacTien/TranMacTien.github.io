@@ -105,7 +105,8 @@ li {
     background: white;
     border-radius: 2px;
 }
-.btn-container{
+
+.btn-container {
     position: relative;
     width: 35px;
     height: 35px;
@@ -114,9 +115,10 @@ li {
     margin-right: 20px;
     cursor: pointer;
 }
+
 .toggle-button {
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
 }
 
@@ -162,12 +164,12 @@ li {
     padding: 150px 20px;
 }
 
-
-
 .hero__title {
     font-family: "Montserrat", "Arial", serif;
     font-weight: 700;
     font-size: 3.5em;
+    opacity: 0;
+    transform: translateX(-100px);
     color: white;
     text-transform: uppercase;
 }
@@ -177,11 +179,14 @@ li {
     font-size: 1.5em;
     font-style: italic;
     color: white;
+    opacity: 0;
+    transform: translateX(100px);
 }
 
 .section {
     padding: 20px 30px;
 }
+
 @media screen and (min-width:1000px) {
     .hero {
         padding: 250px 20px;
@@ -190,6 +195,7 @@ li {
         font-size: 4em;
     }
 }
+
 @media screen and (min-width: 1000px) {
     .toggle-button {
         display: none;
@@ -606,7 +612,8 @@ footer {
     text-align: center;
 }
 
-.loaded {
+.loaded,
+.loaded--tittle {
     opacity: 1;
     transform: translateY(0);
     transition: 1.6s ease;
