@@ -18,14 +18,14 @@ serif;
 }
 
 body {
-    font-size: 12px;
+    font-size: 16px;
     background: white;
     overflow-x: hidden;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
     body {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
