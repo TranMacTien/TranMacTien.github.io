@@ -7,7 +7,7 @@ toggle.addEventListener('click', function () {
 var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {
-    var scroll = document.body.scrollTop;
+    var scroll = window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop;
     if (scroll > 20) {
         navBar.classList.add('navbar--collapse');
         for (var i = 0, n = navBarItem.length; i < n; i++) {
