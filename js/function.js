@@ -1,6 +1,6 @@
-var toggle = document.querySelector('.toggle-button');
+var toggle = document.querySelector('.btn-container');
 toggle.addEventListener('click', function () {
-    this.classList.toggle('toggle-button--close');
+    document.querySelector('.toggle-button').classList.toggle('toggle-button--close');
     document.querySelector('.navbar__group').classList.toggle('navbar__group--toggle');
 });
 //scroll event

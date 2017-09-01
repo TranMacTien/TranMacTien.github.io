@@ -105,13 +105,19 @@ li {
     background: white;
     border-radius: 2px;
 }
-
-.toggle-button {
-    cursor: pointer;
-    margin-top: 25px;
-    margin-right: 20px;
-    float: right;
+.btn-container{
     position: relative;
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.toggle-button {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 .toggle-button:before,
