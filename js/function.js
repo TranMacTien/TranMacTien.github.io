@@ -8,7 +8,7 @@ var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(scroll);
+    // console.log(scroll);
     navbarEffect(scroll);
     lazyLoading(scroll);
 });
