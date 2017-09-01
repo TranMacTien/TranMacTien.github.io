@@ -12,6 +12,11 @@ window.addEventListener('scroll', function () {
     navbarEffect(scroll);
     lazyLoading(scroll);
 });
+// after page loading
+window.addEventListener('load', function () {
+    document.querySelector('.hero__title').classList.add('loaded');
+    document.querySelector('.hero__subtitle').classList.add('loaded');
+});
 
 function lazyLoading(scroll) {
     var aboutSection = document.querySelector('.section--about');

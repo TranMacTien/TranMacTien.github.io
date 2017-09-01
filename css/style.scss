@@ -612,9 +612,8 @@ footer {
     text-align: center;
 }
 
-.loaded,
-.loaded--tittle {
+.loaded {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0, 0);
     transition: 1.6s ease;
 }
