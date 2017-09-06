@@ -1,4 +1,5 @@
 var toggle = document.querySelector('.btn-container');
+var section = document.getElementsByClassName('section');
 toggle.addEventListener('click', function () {
     document.querySelector('.toggle-button').classList.toggle('toggle-button--close');
     document.querySelector('.navbar__group').classList.toggle('navbar__group--toggle');
@@ -8,7 +9,6 @@ var navBar = document.querySelector('.navbar');
 var navBarItem = document.querySelectorAll('.navbar__item');
 window.addEventListener('scroll', function () {
     var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(scroll);
     menuActive(scroll);
     navbarEffect(scroll);
     lazyLoading(scroll);
@@ -24,22 +24,22 @@ function menuActive(scroll) {
     for (var i = 0; i < navBarItem.length; i++) {
         navBarItem[i].classList.remove('navbar__item--active');
     }
-    if (scroll < 400) {
+    if (scroll < 375) {
         navBarItem[0].classList.add('navbar__item--active');
     }
-    if (scroll >= 400 && scroll < 1000) {
+    if (scroll >= 375 && scroll < (section[1].offsetTop - 52)) {
         navBarItem[1].classList.add('navbar__item--active');
     }
-    if (scroll >= 1000 && scroll < 1800) {
+    if (scroll >= (section[1].offsetTop - 52) && scroll < (section[2].offsetTop - 52)) {
         navBarItem[2].classList.add('navbar__item--active');
     }
-    if (scroll >= 1800 && scroll < 2700) {
+    if (scroll >= (section[2].offsetTop - 52) && scroll < (section[3].offsetTop - 52)) {
         navBarItem[3].classList.add('navbar__item--active');
     }
-    if (scroll >= 2700 && scroll < 4300) {
+    if (scroll >= (section[3].offsetTop - 52) && scroll < (section[4].offsetTop - 52)) {
         navBarItem[4].classList.add('navbar__item--active');
     }
-    if (scroll >= 4300) {
+    if (scroll >= (section[4].offsetTop - 52)) {
         navBarItem[5].classList.add('navbar__item--active');
     }
 }
@@ -108,3 +108,49 @@ function WidthChange(mq) {
         }
     }
 }
+
+
+
+// scroll anchor link
+
+for (var i = 0, n = section.length; i <= n; i++) {
+    (function () {
+        var index = i;
+        document.getElementsByClassName('navbar__link')[index].onclick = function (e) {
+            e.preventDefault();
+            if (index === 0) {
+                scrollTo(document.body, 0, 600);
+            } else if (index === 1) {
+                scrollTo(document.body, 376, 600);
+            } else {
+                scrollTo(document.body, section[index - 1].offsetTop - 50, 600);
+            }
+        }
+    })();
+}
+
+function scrollTo(element, to, duration) {
+    var start = element.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+    var animateScroll = function () {
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if (currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+    };
+    animateScroll();
+}
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+};
