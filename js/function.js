@@ -88,23 +88,53 @@ function navbarEffect(scroll) {
 
 //  responsive
 if (matchMedia) {
-    var mq = window.matchMedia("(min-width: 1000px)");
-    mq.addListener(WidthChange);
-    WidthChange(mq);
+    var mq1 = window.matchMedia("(min-width: 1000px)");
+    var mq2 = window.matchMedia("(min-width:600px) and (max-width:999px)");
+    var mq3 = window.matchMedia("(max-width:599px)");
+    mq1.addListener(WidthChange1);
+    mq2.addListener(WidthChange2);
+    mq3.addListener(function(){
+        if(mq3.matches){
+            removeNode();
+        }
+    });
+    WidthChange1(mq1);
+    WidthChange2(mq2);
 }
-
 // media query change
-function WidthChange(mq) {
+function WidthChange1(mq) {
     if (mq.matches) {
+        removeNode();
         var currNode = document.getElementsByClassName('skills__item')[4];
         var newNode = document.createElement('li');
         newNode.classList.add('skills__item');
         newNode.style.display = 'none';
         document.querySelector('.skills__group').insertBefore(newNode, currNode);
-    } else {
-        var removeNode = document.getElementsByClassName('skills__item')[4];
-        if (removeNode.style.display === 'none') {
-            removeNode.remove();
+    }
+}
+
+function WidthChange2(mq) {
+    if (mq.matches) {
+        removeNode();
+        var skill = document.getElementsByClassName('skills__item');
+        var currNode = [skill[2], skill[4], skill[6]];
+        for (var i = 0; i < 3; i++) {
+            (function () {
+                var newNode = document.createElement('li');
+                newNode.classList.add('skills__item');
+                newNode.style.display = 'none';
+                var index = i;
+                document.querySelector('.skills__group').insertBefore(newNode, currNode[index]);
+            })();
+        }
+    }
+}
+// remove node display=none
+function removeNode() {
+    var removeNode = document.getElementsByClassName('skills__item');
+    for (var i = 0; i < removeNode.length; i++) {
+        if (removeNode[i].style.display === 'none') {
+            removeNode[i].remove();
         }
     }
 }
