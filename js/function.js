@@ -149,11 +149,11 @@ function scrollWhenClick(section) {
             document.getElementsByClassName('navbar__link')[index].onclick = function (e) {
                 e.preventDefault();
                 if (index === 0) {
-                    scrollTo(document.body, 0, 600);
+                    scrollTo(document.body||document.documentElement, 0, 600);
                 } else if (index === 1) {
-                    scrollTo(document.body, 376, 600);
+                    scrollTo(document.body||document.documentElement, 376, 600);
                 } else {
-                    scrollTo(document.body, section[index - 1].offsetTop - 50, 600);
+                    scrollTo(document.body||document.documentElement, section[index - 1].offsetTop - 50, 600);
                 }
             }
         })();
@@ -171,6 +171,7 @@ function scrollTo(element, to, duration) {
         currentTime += increment;
         var val = Math.easeInOutQuad(currentTime, start, change, duration);
         element.scrollTop = val;
+        console.log(val);
         if (currentTime < duration) {
             setTimeout(animateScroll, increment);
         }
