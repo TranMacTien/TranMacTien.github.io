@@ -129,7 +129,7 @@ function WidthChange2(mq) {
         }
     }
 }
-// remove node display=none
+// remove node has style display=none
 function removeNode() {
     var removeNode = document.getElementsByClassName('skills__item');
     for (var i = 0; i < removeNode.length; i++) {
@@ -142,36 +142,35 @@ function removeNode() {
 
 
 // scroll anchor link
-function scrollWhenClick(section) {
+(function () {
     for (var i = 0, n = section.length; i <= n; i++) {
         (function () {
             var index = i;
-            document.getElementsByClassName('navbar__link')[index].onclick = function (e) {
-                e.preventDefault();
+            document.getElementsByClassName('navbar__link')[index].addEventListener('click', function (e) {
                 if (index === 0) {
-                    scrollTo(document.body||document.documentElement, 0, 600);
+                    scrollTo(0, 600);
                 } else if (index === 1) {
-                    scrollTo(document.body||document.documentElement, 376, 600);
+                    scrollTo(376, 600);
                 } else {
-                    scrollTo(document.body||document.documentElement, section[index - 1].offsetTop - 50, 600);
+                    scrollTo(section[index - 1].offsetTop - 50, 600);
                 }
-            }
+                e.preventDefault();
+            }, false);
         })();
     }
-}
+})();
 
-scrollWhenClick(section);
 
-function scrollTo(element, to, duration) {
-    var start = element.scrollTop,
+function scrollTo(to, duration) {
+    var start = document.documentElement.scrollTop || document.body.scrollTop,
         change = to - start,
         currentTime = 0,
         increment = 20;
     var animateScroll = function () {
         currentTime += increment;
         var val = Math.easeInOutQuad(currentTime, start, change, duration);
-        element.scrollTop = val;
-        console.log(val);
+        document.documentElement.scrollTop = document.body.scrollTop = val;
+        // document.body.scrollTop = val;
         if (currentTime < duration) {
             setTimeout(animateScroll, increment);
         }
