@@ -10,7 +10,15 @@ var VETRUONG3 = {
         this.handleLoader(), this.registerEvent();
     },
     verify: function() {
-        "" === this.username.value ? alert("Please input your name!") : "" === this.password.value ? alert("Please input gift code!") : "tien" !== this.password.value ? alert("Wrong gift code!") : alert("Success");
+        if ("" === this.username.value) alert("Please input your name!"); else if ("" === this.password.value) alert("Please input gift code!"); else {
+            -1727222872 === this.hashPassword(this.password.value) ? alert("success") : alert("wrong!");
+        }
+    },
+    hashPassword: function(e) {
+        for (var t = 0, n = 0; n < e.length; n++) {
+            t = (t << 5) - t + e.charCodeAt(n), t |= 0;
+        }
+        return t;
     },
     registerEvent: function() {
         var e = this;
