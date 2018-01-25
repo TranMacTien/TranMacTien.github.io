@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -10,17 +10,21 @@
 </head>
 <body>
     <div class="loader">
-        <img class="loader__icon" src="img/logo.png" alt="logo">
+        <img class="loader__icon bounce" src="img/logo.png" alt="logo">
     </div>
     <div class="cover-img">
         <div class="form-wrapper">
             <h1 class="form__title">Về trường 3</h1>
             <label class="form__label">Your name</label>
-            <input class="form__input" type="text" name="username">
+            <input id="username" class="form__input" type="text" name="username">
             <label class="form__label">Gift key</label>
-            <input class="form__input" type="password" name="password">
-            <button class="form__btn">OK</button>
+            <input id="password" class="form__input" type="password" name="password">
+            <button id="submit" class="form__btn">OK</button>
         </div>
+    </div>
+
+    <div class="congratulation">
+
     </div>
     <script src="js/main-dist.js"></script>
 </body>
