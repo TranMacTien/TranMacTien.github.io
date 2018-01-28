@@ -15,8 +15,8 @@ var VETRUONG3 = {
         }
     },
     hashPassword: function(e) {
-        for (var t = 0, n = 0; n < e.length; n++) {
-            t = (t << 5) - t + e.charCodeAt(n), t |= 0;
+        for (var t = 0, r = 0; r < e.length; r++) {
+            t = (t << 5) - t + e.charCodeAt(r), t |= 0;
         }
         return t;
     },
@@ -28,14 +28,7 @@ var VETRUONG3 = {
             e.verify();
         });
     },
-    handleLoader: function() {
-        var e = this;
-        window.addEventListener("load", function() {
-            setTimeout(function() {
-                e.loader.classList.add("is-hidden");
-            }, 2e3);
-        });
-    }
+    initGiftScreen: function() {}
 };
 
 VETRUONG3.exec.bind(VETRUONG3)();

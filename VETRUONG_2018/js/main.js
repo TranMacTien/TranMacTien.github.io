@@ -43,12 +43,15 @@ let VETRUONG3 = {
             this.verify();
         })
     },
-    handleLoader: function () {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                this.loader.classList.add('is-hidden');
-            }, 2000);
-        });
+    // handleLoader: function () {
+    //     window.addEventListener('load', () => {
+    //         setTimeout(() => {
+    //             this.loader.classList.add('is-hidden');
+    //         }, 2000);
+    //     });
+    // },
+    initGiftScreen: function() {
+
     }
 }
 
