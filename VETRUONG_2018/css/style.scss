@@ -22,6 +22,18 @@ input {
     display: inline-block;
 }
 
+.row {
+    &:after, &:before {
+        content: '';
+        display: table;
+        visibility: hidden;
+        height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     select,
     textarea,
@@ -85,8 +97,7 @@ input {
     height: 100%;
     left: 0;
     top: 0;
-    background: #348AC7;
-    /* fallback for old browsers */
+    background: #348AC7;  // fallback for old browsers
     background: linear-gradient(to top, #348AC7, #7474BF);
     z-index: 99;
     opacity: 1;
@@ -169,6 +180,7 @@ input {
 }
 
 .congratulation {
+    position: relative;
     .congratulation__text {
         position: relative;
         height: 100vh;
@@ -179,8 +191,13 @@ input {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
+        @include screen(small) {
+            width: 50%;
+        }
     }
-    .congratulation__image {}
+    .congratulation__image {
+        width: 100%;
+    }
     .congratulation__arrow {
         position: absolute;
         color: #3f3532;
@@ -205,4 +222,12 @@ input {
 
 .gift__image {
     display: block;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    // padding: 20px;
+    &.fade-in {
+        opacity: 1;
+    }
 }
