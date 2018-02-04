@@ -23,7 +23,8 @@ input {
 }
 
 .row {
-    &:after, &:before {
+    &:after,
+    &:before {
         content: '';
         display: table;
         visibility: hidden;
@@ -97,7 +98,7 @@ input {
     height: 100%;
     left: 0;
     top: 0;
-    background: #348AC7;  // fallback for old browsers
+    background: #348AC7; // fallback for old browsers
     background: linear-gradient(to top, #348AC7, #7474BF);
     z-index: 99;
     opacity: 1;
@@ -205,7 +206,7 @@ input {
         text-align: center;
         display: inline-block;
         width: 100%;
-        animation: arrow 1s ease-in-out alternate-reverse infinite;
+        animation: arrow .5s ease-in-out alternate-reverse infinite;
         &:before {
             content: '';
             display: block;
@@ -222,8 +223,12 @@ input {
 }
 
 @keyframes arrow {
-    from {transform: translateY(0)}
-    to {transform: translateY(10px)}
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(10px)
+    }
 }
 
 .gift__image {
@@ -232,8 +237,50 @@ input {
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease;
-    // padding: 20px;
     &.fade-in {
         opacity: 1;
+    }
+}
+
+.overlay-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(#000, 0.7);
+    z-index: 100;
+    .popup__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        padding: 60px 20px;
+        background: #fff;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        @include screen(small) {
+            width: auto;
+            padding: 60px 120px;
+        }
+    }
+    .popup__button {
+        cursor: pointer;
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 50px;
+        background: #348AC7;
+        border: 0 none;
+        color: #fff;
+        font-weight: bold;
+        transition-duration: 0.4s;
+        &:hover {
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.24), 0 9px 25px 0 rgba(0, 0, 0, 0.19);
+        }
+        &:active {
+            background: rgb(28, 92, 134);
+        }
     }
 }
