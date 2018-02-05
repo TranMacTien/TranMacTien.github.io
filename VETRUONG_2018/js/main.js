@@ -74,7 +74,7 @@ let VETRUONG3 = {
                                             <div class="congratulation__text">
                                                 <span class="congratulation__user">Chúc mừng "${this.username.value}" đã chiến thắng !!!</span>
                                                 <div class="congratulation__img-wrapper">
-                                                    <img class="congratulation__image bounceInDown" src="img/congratulation.png" alt="text">
+                                                    
                                                 </div>
                                                 <span class="congratulation__arrow">Scroll down</span>
                                             </div>
@@ -90,6 +90,13 @@ let VETRUONG3 = {
                                                 </div>
                                             </div>
                                         </div>`;
+        setTimeout(() => {
+            let imgText = document.createElement('img');
+            imgText.className = 'congratulation__image bounceInDown';
+            imgText.src = 'img/congratulation.png';
+            imgText.alt = 'text';
+            document.querySelector('.congratulation__img-wrapper').appendChild(imgText);
+        }, 1000);
         this.giftScreenControl();
     },
 

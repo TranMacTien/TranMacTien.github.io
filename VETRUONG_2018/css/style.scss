@@ -218,6 +218,7 @@ input {
     }
     .congratulation__image {
         width: 100%;
+        // animation-delay: 1s;
     }
     .congratulation__arrow {
         position: absolute;
@@ -252,8 +253,10 @@ input {
 }
 
 .gift__wrapper {
-    float: left;
-    width: 33.33333333333%;
+    @include screen(small) {
+        float: left;
+        width: 33.33333333333%;
+    }
 }
 .gift__image {
     display: block;
