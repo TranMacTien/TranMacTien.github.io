@@ -1,5 +1,6 @@
 let VETRUONG3 = {
     popup: {},
+    verifyLoader: {},
     username: document.getElementById('username'),
     password: document.getElementById('password'),
     loader: document.querySelector('.loader'),
@@ -9,24 +10,25 @@ let VETRUONG3 = {
     exec: function () {
         this.handleLoader();
         this.registerEvent();
+        this.initVerifyLoader();
 
     },
     verify: function () {
         if (this.username.value === '') {
-            alert('Please input your name!');
+            alert('Nhập tên đã nào!');
         } else if (this.password.value === '') {
-            alert('Please input gift code!');
+            alert('Nhập mã số nào!');
         } else {
             let hashPass = this.hashPassword(this.password.value);
             if (hashPass === -1727222872) {
-               this.loginSuccess();
+                this.loginSuccess();
             } else {
-               this.loginFail();
+                this.loginFail();
             }
         }
     },
 
-    loginSuccess: function() {
+    loginSuccess: function () {
         this.initGiftScreen();
         this.removeLoginPage();
     },
@@ -36,7 +38,7 @@ let VETRUONG3 = {
         this.popup.showLoginFail();
     },
 
-    removeLoginPage: function() {
+    removeLoginPage: function () {
         document.querySelector('.cover-img').style.display = 'none';
     },
 
@@ -49,17 +51,13 @@ let VETRUONG3 = {
         }
         return hash;
     },
+
     registerEvent: function () {
-        this.formWrapper.addEventListener('keyup', (e) => {
-            e.preventDefault();
-            if (e.keyCode === 13) {
-                this.btnSubmit.click();
-            }
-        });
         this.btnSubmit.addEventListener('click', () => {
             this.verify();
         })
     },
+
     handleLoader: function () {
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -67,12 +65,14 @@ let VETRUONG3 = {
             }, 2000);
         });
     },
+
     initGiftScreen: function () {
         this.congratulation = document.createElement('div');
         this.container.appendChild(this.congratulation);
         this.congratulation.className = 'congratulation';
         this.congratulation.innerHTML = `<div class="congratulation">
                                             <div class="congratulation__text">
+                                                <span class="congratulation__user">Chúc mừng "${this.username.value}" đã chiến thắng !!!</span>
                                                 <div class="congratulation__img-wrapper">
                                                     <img class="congratulation__image bounceInDown" src="img/congratulation.png" alt="text">
                                                 </div>
@@ -92,6 +92,7 @@ let VETRUONG3 = {
                                         </div>`;
         this.giftScreenControl();
     },
+
     giftScreenControl: function () {
         window.addEventListener('scroll', () => {
             let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
@@ -109,6 +110,7 @@ let VETRUONG3 = {
             }
         });
     },
+
     initPopup: function () {
         this.popup.overlayBg = document.createElement('div');
         this.popup.overlayBg.className = 'overlay-bg';
@@ -120,7 +122,7 @@ let VETRUONG3 = {
         this.container.appendChild(this.popup.overlayBg);
         this.popup.overlayBg.appendChild(this.popup.popupContent);
         this.popup.showLoginFail = () => {
-            this.popup.popupContent.innerHTML = 'Wrong password! </br>Please try again.';
+            this.popup.popupContent.innerHTML = 'Sai rồi, tưởng dễ ăn à =))';
             this.popup.popupContent.appendChild(this.popup.popupButton);
         }
         this.popup.eventClose = () => {
@@ -135,5 +137,6 @@ let VETRUONG3 = {
         this.popup.eventClose();
     }
 }
-
-VETRUONG3.exec.bind(VETRUONG3)();
+document.addEventListener('DOMContentLoaded', function () {
+    VETRUONG3.exec.bind(VETRUONG3)();
+})
