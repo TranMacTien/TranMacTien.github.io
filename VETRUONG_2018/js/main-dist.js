@@ -52,7 +52,9 @@ var VETRUONG3 = {
         setTimeout(function() {
             var t = document.createElement("img");
             t.className = "congratulation__image bounceInDown", t.src = "img/congratulation.png", 
-            t.alt = "text", document.querySelector(".congratulation__img-wrapper").appendChild(t);
+            t.alt = "text", t.onload = function() {
+                document.querySelector(".congratulation__img-wrapper").appendChild(t);
+            };
         }, 1e3), this.giftScreenControl();
     },
     giftScreenControl: function() {

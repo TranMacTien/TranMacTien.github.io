@@ -95,7 +95,9 @@ let VETRUONG3 = {
             imgText.className = 'congratulation__image bounceInDown';
             imgText.src = 'img/congratulation.png';
             imgText.alt = 'text';
-            document.querySelector('.congratulation__img-wrapper').appendChild(imgText);
+            imgText.onload = function () {
+                document.querySelector('.congratulation__img-wrapper').appendChild(imgText);
+            }
         }, 1000);
         this.giftScreenControl();
     },
