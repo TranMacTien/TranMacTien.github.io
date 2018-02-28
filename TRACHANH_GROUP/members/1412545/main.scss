@@ -1,0 +1,136 @@
+$light-gray: #EDEFF5;
+$yellow: #FFC600;
+$black-opacity:rgba(170, 170, 170, 0.5);
+$light-black:#212529;
+$font-montserrat: "Montserrat",
+"Arial",
+sans-serif;
+$font-droid-serif: "Droid Serif",
+"Arial",
+serif;
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: white;
+	overflow-x: hidden;
+	font-family: "Muli", "Arial", sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+	visibility: hidden;
+	height: 0;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.hero {
+	background-image: url("images/hero.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 200px 20px;
+}
+
+.title {
+	font-family: $font-montserrat;
+	color: $light-black;
+	font-weight: 700;
+	font-size: 3em;
+}
+
+.hero__title {
+	font-family: "Montserrat", "Arial", serif;
+	font-weight: 700;
+	font-size: 3.5em;
+	color: white;
+	text-transform: uppercase;
+}
+
+.hero__subtitle {
+	font-family: $font-droid-serif;
+	font-size: 1.5em;
+	font-style: italic;
+	color: white;
+}
+
+.logo-wrapper {
+	text-align: center;
+}
+
+.logo {
+	margin-top: -125px;
+	width: 250px;
+	height: 250px;
+	border: 10px solid white;
+	border-radius: 50%;
+}
+
+.section {
+	padding: 20px 30px;
+	text-align: center;
+}
+
+.info__table {
+	font-size: 2em;
+	width: 100%;
+	border: 1px solid #222;
+	border-radius: 10px;
+	td {
+		width: 50%;
+		text-align: left;
+		padding: 10px;
+		&:first-child {
+			text-align: right;
+		}
+	}
+}
+
+.back-wrapper {
+	text-align: center;
+}
+.back {
+	display: inline-block;
+	text-decoration: underline;
+	color: $light-black;
+	font-size: 1.6em;
+	margin: 20px 0;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 5px;
+		left: -30px;
+		width: 20px;
+		height: 20px;
+		border-top: 4px solid $light-black;
+		border-left: 4px solid $light-black;
+		transform: rotate(-45deg);
+	}
+}
