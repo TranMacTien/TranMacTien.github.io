@@ -52,7 +52,8 @@ input {
   font-weight: bold;
   font-size: 14px;
   background-origin: border-box; }
-
+.btn-email-wrapper {
+	padding-right: 0;}
 .btn--gray {
   background-image: url("images/bg-btn-gray.jpg");
   background-position: center;
