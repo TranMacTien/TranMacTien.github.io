@@ -1,0 +1,243 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pediasure</title>
+
+    <link rel="icon" type="image/png" href="assets/images/favicons/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="assets/images/favicons/favicon-16x16.png" sizes="16x16"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link href="assets/css/vendor.css" rel="stylesheet"><link href="assets/css/app.css" rel="stylesheet"></head>
+
+  <body data-module="PopupHandler">
+
+    <!-- HEADER -->
+    <header class="header d-flex align-items-center">
+  <div class="header--content d-flex justify-content-between w-100">
+    <div class="logo-container">
+      <div>
+        <img alt="Logo" src="./assets/images/logo.svg">
+      </div>
+    </div>
+    <div class="d-flex">
+      <button class="btn header-btn">Thể lệ</button>
+      <button class="btn header-btn">Danh sách</br>trúng thưởng</button>
+  </div>
+</div></header>
+
+    <!-------------------->
+
+    <!-- MAIN CONTENT -->
+  <section class="page-content step-2" data-module="ImageEditorHandle">
+    <div class="banner-thankyou">
+      <div class="banner-thankyou__text text-center">
+        <h2 class="banner-thankyou__title">Chúc mừng bạn đã có khởi đầu khá tốt.</h2>
+        <h3 class="banner-thankyou__sub-title">PediaSure sẽ gửi quà củaBước 1 đến tận nhà của bạn nhé.</h3>
+      </div>
+      <img class="hide-on-desktop" alt="Banner" src="./assets/images/banner-thankyou.png"/>
+    </div>
+
+    <div class="main-banner">
+      <img class="hide-on-desktop" src="./assets/images/background-thankyou.jpg" alt="">
+      <img class="main-banner__bg-desktop" src="./assets/images/d-background-thankyou.jpg" alt="">
+    </div>
+
+    <div class="stepper">
+      <h3 class="text-center">Cơ hội nhận nhiều phần quà hấp dẫn qua mỗi bước.</h3>
+      <div class="stepper__container">
+        <div class="stepper__steps d-flex justify-content-between align-items-center">
+          <div class="stepper__icon stepper__icon--active">
+            <img alt="Step 1" src="./assets/images/label-step-1.png"/>
+          </div>
+          <div class="stepper__icon">
+            <img alt="Step 2" src="./assets/images/label-step-2.png"/>
+          </div>
+          <div class="stepper__icon">
+            <img alt="Step 3" src="./assets/images/label-step-3.png"/>
+          </div>
+        </div>
+        <div class="stepper__progress">
+          <div class="stepper__progress--done stepper__progress--step-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-2-container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-box-container">
+            <div class="text-box-wrapper">
+              <div class="text-box">
+                <h3 class="text-box__title">BƯỚC 2</h3>
+                <p class="text-box__content">Đăng ảnh Cùng lớn bên con của gia đình bạn với khung ảnh PediaSure cùng hashtag
+                  <b>#PediaSureCungLonBenCon</b>
+                  để có cơ hội nhận đến 8 lon PediaSure</p>
+              </div>
+              <div class="text-center">
+                <button class="button button--gold"><span>Chia sẻ facebook</span></button>
+                <p class="text text--error text-center my-2">Vui lòng hoàn tất bước 2 để tiếp tục.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="frame-section">
+            <div class="setting image_picker">
+              <div class="settings_wrap" id="drop_target">
+                <div class="drop_target">
+                  <div class="drop_target__icon">
+                    <label class="upload_img" for="inputFile">
+                      <span class="upload_img__label">TẢI HÌNH ẢNH</span>
+                      <span class="upload_img__icon">+</span>
+                    </label>
+                    <input class="" id="inputFile" type="file" accept="image/*;capture=camera"/>
+                  </div>
+                </div>
+              </div>
+              <div class="result-frame-container hidden">
+                <div class="result-frame">
+                  <img id="result" src="" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="frame__group-button">
+              
+              <label id="upload-image" class="button button--frame" for="inputFile"><img src="./assets/images/icon-add-image.svg" alt=""><span>Tải hình</span></label>
+              <button class="button button--gold hide-on-desktop"><span>Chia sẻ facebook</span></button>
+            </div>
+            <p class="text text--error text-center my-2 hide-on-desktop">Vui lòng hoàn tất bước 2 để tiếp tục.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-2-container step-2-container--2">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-box-container">
+            <div class="text-box-wrapper">
+              <div class="text-box text-box--2">
+                <p class="text-box__content">Cùng cảm nhận thông điệp của PediaSure qua phim ngắn "Cùng lớn bên con".</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="video-container mx-auto">
+            <div class="video-bg">
+              <div class="video-inner">
+                <div class="video-wrapper">
+                  <div id="video"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-2">
+      <div class="footer-2__content">
+        <p class="footer-2__text">Hãy tiếp tục hoàn thiện</p>
+        <button class="footer-2__button"><span>Bước 3</span></button>
+        <p class="footer-2__text">để cả nhà có cơ hội</p>
+        <p class="footer-2__text">DU LỊCH SINGAPORE</p>
+      </div>
+      <img class="footer-2__bg-desktop" src="./assets/images/d-footer-step-2.png" alt="">
+      <img class="footer-2__img hide-on-desktop" src="./assets/images/footer-step-2.png" alt="">
+    </div>
+
+    <div class="popup" id="popup-image-editor">
+      <div class="popup__overlay">
+      </div>
+      <div class="popup__body">
+        <button class="popup__close js-close-popup" >X</button>
+        <div class="cropper">
+          <img id="crop" />
+        </div>
+        <div class="text-center">
+          <button class="button button--gold" id="submit-cropper">OK</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script defer>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    var videos = [
+        'u_JYCTUNz-0',
+        'iz1JrxDfzuI',
+        'k0_kW3Tc0Dc',
+        'odJ8jy9sEgA',
+        'nDV_OoG4tdE',
+        'CF2BfWYRZoc',
+        '4LqtOn-xLYw',
+        'qnf1UBWQaHI'
+    ]
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('video', {
+            videoId: videos[0],
+            playerVars: {
+                autoplay: 0
+            },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function changeYTVideo(id) {
+        $('.video-wrapper').html('<div id="video"></div>');
+        player = new YT.Player('video', {
+            videoId: videos[id],
+            playerVars: {
+                autoplay: 0
+            },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    var done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && ! done) {
+            setTimeout(stopVideo, 6000);
+            done = true;
+        }
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+    
+  </script>
+
+    <!-------------------->
+
+    <!-- FOOTER -->
+    <footer>
+
+</footer>
+
+    <!-------------------->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="assets/js/vendor.js"></script><script type="text/javascript" src="assets/js/app.js"></script></body>
+</html>
